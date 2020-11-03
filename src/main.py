@@ -1,5 +1,5 @@
-import src.parser
-import src.retriever
+import parser
+import retriever
 
 if __name__ == "__main__":
-    src.parser.parse(src.retriever.acquire_data(2018))
+    parser.parse(retriever.acquire_data(2018))
