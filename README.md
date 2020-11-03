@@ -7,11 +7,21 @@ I scraped the [University of California's Employee Pay website](https://ucannual
 
 **This project is still a work in progress!**
 
+# Usage
+
+Run:
+
+```bash
+$ python3 src/main.py
+```
+
+and you'll get a file named "UCOP_Data.csv" in the current directory. Look at `main.py` and double check the year.
+
 # Layout
 
-* `\data\` contains a comma-separated text file for each year, representing the entire employee data as reported by the universities.
+* `data` contains a comma-separated text file for each year, representing the entire employee data as reported by the universities.
 
-* `\src` contains source code -- split into two modules -- a retriever, which fetches data from the website, and a parser, that writes it to a CSV file.
+* `src` contains source code -- split into two modules -- a retriever, which fetches data from the website, and a parser, that writes it to a CSV file.
 
-* `\tests` contains unit tests. **These are currently in progress!**
+* `tests` contains unit tests. **These are currently in progress!**
 
