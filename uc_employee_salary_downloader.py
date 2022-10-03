@@ -1,7 +1,9 @@
+import argparse
+import csv
 import json
 import re
 import requests
-
+import pdb
 
 def acquire_data(year: int) -> dict:
     """
@@ -56,3 +58,44 @@ def acquire_data(year: int) -> dict:
 
     return json.loads(response.text.replace("\'", "\"").encode('utf-8'),
                       strict=False)
+
+def parse_salary_data_to_csv(data: dict):
+    """
+    Takes a Python object that holds every employee's salary data; extracts that into a CSV file.
+
+    :param data: Python dict. See tests for example JSON format that is expected.
+    :return: Nothing
+    """
+    # These come from website's form.
+    column_names = [
+        "id", "year", "location", "first name", "last name", "title",
+        "gross pay", "regular pay", "overtime pay", "other pay"
+    ]
+
+    number_of_requests_to_search_over = data['records']
+
+    data_records: list = data["rows"]
+
+    with open("UCOP_Data.csv", "w") as csv_file_object:
+        csv_writer = csv.writer(csv_file_object, delimiter=",")
+
+        # Write column names to CSV
+        csv_writer.writerow(column_names)
+
+        for employee_record in data_records:
+
+            employee_data: list = employee_record["cell"]
+
+            assert (len(employee_data) == len(column_names))
+
+            csv_writer.writerow(employee_data)
+
+
+if __name__ == "__main__":
+    
+    argparse_parser = argparse.ArgumentParser()
+    
+    argparse_parser.add_argument("-y", "--year", type=int, help="The year you wish to download salary data for.")
+    argparse_args = argparse_parser.parse_args()
+    
+    parse_salary_data_to_csv(acquire_data(argparse_args.year))
