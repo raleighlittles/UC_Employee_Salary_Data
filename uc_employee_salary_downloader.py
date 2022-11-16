@@ -5,13 +5,14 @@ import re
 import requests
 import pdb
 
+
 def acquire_data(year: int) -> dict:
     """
     Issues a POST request to the UC annual website to retrieve all possible employee financial data.
 
     :return:
     """
-    base_url = "https://ucannualwage.ucop.edu"
+    base_url: str = "https://ucannualwage.ucop.edu"
     search_url: str = base_url + "/wage/search.action"
 
     # Request headers copied of out Chrome's devtools.
@@ -48,7 +49,7 @@ def acquire_data(year: int) -> dict:
         exit(1)
 
     # Despite the response type being "text/json", calling `response.json()` fails immediately with the following error message:
-    # implejson.errors.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 1 (char 2)
+    # json.errors.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 1 (char 2)
     # Thus, we convert the response.text object to have double quotes instead of single quotes.
     # Additionally, there is an errant control character somehow embedded in response.text, which gives the error:
     # json.decoder.JSONDecodeError: Invalid control character at: line 185849 column 69 (char 22761096)
@@ -58,6 +59,7 @@ def acquire_data(year: int) -> dict:
 
     return json.loads(response.text.replace("\'", "\"").encode('utf-8'),
                       strict=False)
+
 
 def parse_salary_data_to_csv(data: dict):
     """
@@ -92,10 +94,11 @@ def parse_salary_data_to_csv(data: dict):
 
 
 if __name__ == "__main__":
-    
+
     argparse_parser = argparse.ArgumentParser()
-    
-    argparse_parser.add_argument("-y", "--year", type=int, help="The year you wish to download salary data for.")
+
+    argparse_parser.add_argument(
+        "-y", "--year", type=int, help="The year you wish to download salary data for.")
     argparse_args = argparse_parser.parse_args()
-    
+
     parse_salary_data_to_csv(acquire_data(argparse_args.year))
