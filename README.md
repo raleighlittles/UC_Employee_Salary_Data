@@ -56,9 +56,9 @@ Typically there's about a 9 month lag for the data to be published, i.e the prev
 
 The UCOP assigned job titles for student types are odd. See `docs` for a list of them, but you can also just search "Academic Titles UCOP" to figure out what they mean.
 
-> Q2: Why are some of the first and last name fields missing ("*****") ?
+> Q3: Why are some of the first and last name fields missing ("*****") ?
 
-For privacy reasons, the UCOP database doesn't list the names of active students -- undergraduates or graduates. In the example CSV I listed you'll see that the titles are all student related.
+Due to [FERPA](https://en.wikipedia.org/wiki/Family_Educational_Rights_and_Privacy_Act) restrictions, the names of students (this includes both undergraduates and graduates!) names are censored. In the example CSV I listed you'll see that the titles are all student related.
 
 
 # Future/Roadmap
