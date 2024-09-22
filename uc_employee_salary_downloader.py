@@ -13,28 +13,27 @@ def acquire_data(year: int) -> dict:
     :return:
     """
     base_url: str = "https://ucannualwage.ucop.edu"
-    search_url: str = base_url + "/wage/search.action"
+    search_url: str = base_url + "/wage/search.do"
 
     # Request headers copied of out Chrome's devtools.
     request_headers = {
-        "Host": re.sub('https://', '', base_url),
         "Content-Length": '255',
         "Origin": base_url,
         "User-Agent":
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36",
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0",
         "Content-Type": "application/x-www-form-urlencoded",
         "Accept": "application/json, text/javascript, */*; q=0.01",
         "X-Requested-With": "XMLHttpRequest",
-        "DNT": "1",
         "Referer": base_url + "/wage/",
         "Accept-Encoding": "gzip, deflate, br",
         "Accept-Language": "en-US, en; q=0.8;q=0.6",
-        "Cookie": "JSESSIONID=0000Uq2FDN8doIsM5DBz4pU0xzd:169l0fmr2"
+        "Cookie": "JSESSIONID=3BB001A8BF120628A6F641D288077941; AWSALB=GvmQ6hPGjEHx/PVbH1sxDajfAd+y+7trNGbNantJEfsd9NGs7SiaqZTDL8KrXqDIqlujscbyzbHVsEZZBPaKk7/DRWmAR7HxDlcqNqWPe6xjCxNq/GReVErKeQ7A; AWSALBCORS=GvmQ6hPGjEHx/PVbH1sxDajfAd+y+7trNGbNantJEfsd9NGs7SiaqZTDL8KrXqDIqlujscbyzbHVsEZZBPaKk7/DRWmAR7HxDlcqNqWPe6xjCxNq/GReVErKeQ7A"
     }
 
+    
     # Dummy request payload. Searches over all locations to search for any employee receiving between 1 and
     # 1 billion dollars in salary (aka, everyone).
-    payload = "_search=false&nd=1497757924608&rows=" + "10000000" + "&page=1&sidx=EAW_LST_NAM&sord=asc&year=" + str(
+    payload = "_search=false&nd=1724651055477&rows=" + "10000" + "&page=1&sidx=EAW_LST_NAM&sord=asc&year=" + str(
         year
     ) + "&location=ALL&firstname=&lastname=&title=&startSal=1&endSal=1000000000"
 
