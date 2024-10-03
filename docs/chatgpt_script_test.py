@@ -1,23 +1,40 @@
-Document
-  Table (block)
-    THead
-      TR
-        TH
-          P (block)
-            "Title/Job Descr "
-        TH
-          P (block)
-            "Title/Job Code "
-        TH
-          P (block)
-            "Salary Scale Table "
-        TH
-          P (block)
-            "CTO "
-        TH
-          P (block)
-            "CTO Name "
-    TBody
+import csv
+
+def parse_input_to_csv(input_str, output_csv):
+    rows = []
+    current_row = []
+
+    for line in input_str.splitlines():
+        stripped_line = line.strip()
+
+        if stripped_line.startswith(","):
+            # Csv row cannot start with commas
+            stripped_line = stripped_line[1:]
+
+        # Detect the start of a new row
+        if stripped_line == "TR":
+            if current_row:  # Save the previous row if any
+                rows.append(current_row)
+                current_row = []
+
+        # Collect text inside the P (block) lines
+        elif stripped_line.startswith('"') and stripped_line.endswith('"'):
+            text = stripped_line.strip('"')
+            current_row.append(text)
+
+    # Append the last row if it exists
+    if current_row:
+        rows.append(current_row)
+
+    # Write rows to a CSV file
+    with open(output_csv, mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerows(rows)
+
+    print(f"CSV saved to {output_csv}")
+
+# Example input
+input_str = """
       TR
         TH
           P (block)
@@ -13549,7 +13566,7 @@ Document
           P (block)
             ""
             "CWR "
-        TD
+        TDa
           P (block)
             ""
             "CONTINGENT WORKER "
@@ -13589,17 +13606,11 @@ Document
           P (block)
             ""
             "CONTINGENT WORKER "
-  P (block)
-    " "
-  P (block)
-    "Notes:   "
-  P (block)
-    "NEX = Nonexempt.  Please contact local Academic Personnel Office regarding use of Nonexempt titles. "
-  P (block)
-    "Salary scale tables for Nonexempt titles are indicated with an "N". "
-  P (block)
-    "* Salary Scale for guidance only.  "
-  P (block)
-    "** Contact local Academic Personnel Office regarding use of this title and salary rates. "
-  P (block)
-    " "
+      TR
+"""
+
+# Define the path for the output CSV
+output_csv = 'titles.csv'
+
+# Call the function to parse input and save to CSV
+parse_input_to_csv(input_str, output_csv)
