@@ -58,7 +58,7 @@ The UCOP assigned job titles for student types are odd. See `docs` for a list of
 
 > Q3: Why are some of the first and last name fields missing ("*****") ?
 
-Due to [FERPA](https://en.wikipedia.org/wiki/Family_Educational_Rights_and_Privacy_Act) restrictions, the names of students (this includes both undergraduates and graduates!) names are censored. In the example CSV I listed you'll see that the titles are all student related.
+Due to [FERPA](https://en.wikipedia.org/wiki/Family_Educational_Rights_and_Privacy_Act) restrictions, the names of students (this includes both undergraduates and graduates!) names are censored, replaced with 5 asterisks instead. In the example CSV I listed you'll see that the titles are all student related.
 
 
 # Future/Roadmap

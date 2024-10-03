@@ -1,0 +1,20 @@
+Title:           Academic Titles by Title Code
+Author:          Academic Personnel and Programs
+Creator:         Microsoft® Excel® for Microsoft 365
+Producer:        Microsoft® Excel® for Microsoft 365
+CreationDate:    Fri Jun  2 14:36:47 2023 MST
+ModDate:         Mon Sep 18 13:33:43 2023 MST
+Custom Metadata: no
+Metadata Stream: yes
+Tagged:          yes
+UserProperties:  no
+Suspects:        no
+Form:            AcroForm
+JavaScript:      no
+Pages:           12
+Encrypted:       no
+Page size:       612 x 792 pts (letter)
+Page rot:        0
+File size:       161640 bytes
+Optimized:       yes
+PDF version:     1.7

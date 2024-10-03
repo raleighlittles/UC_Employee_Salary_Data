@@ -1,10 +1,12 @@
 import argparse
 import csv
 import json
-import re
 import requests
-import pdb
+import time
+import os
+import random
 
+ONE_MINUTE_TO_SECONDS = 60
 
 def acquire_data(year: int) -> dict:
     """
@@ -30,66 +32,93 @@ def acquire_data(year: int) -> dict:
         "Cookie": "JSESSIONID=3BB001A8BF120628A6F641D288077941; AWSALB=GvmQ6hPGjEHx/PVbH1sxDajfAd+y+7trNGbNantJEfsd9NGs7SiaqZTDL8KrXqDIqlujscbyzbHVsEZZBPaKk7/DRWmAR7HxDlcqNqWPe6xjCxNq/GReVErKeQ7A; AWSALBCORS=GvmQ6hPGjEHx/PVbH1sxDajfAd+y+7trNGbNantJEfsd9NGs7SiaqZTDL8KrXqDIqlujscbyzbHVsEZZBPaKk7/DRWmAR7HxDlcqNqWPe6xjCxNq/GReVErKeQ7A"
     }
 
-    
-    # Dummy request payload. Searches over all locations to search for any employee receiving between 1 and
-    # 1 billion dollars in salary (aka, everyone).
-    payload = "_search=false&nd=1724651055477&rows=" + "10000" + "&page=1&sidx=EAW_LST_NAM&sord=asc&year=" + str(
-        year
-    ) + "&location=ALL&firstname=&lastname=&title=&startSal=1&endSal=1000000000"
+    response_data = list()
 
-    session = requests.Session()
-    response = session.post(search_url, headers=request_headers, data=payload)
+    # Have to paginate results
+    page_idx = 1
 
-    try:
-        response.raise_for_status()
+    while True:
 
-    except requests.HTTPError as e:
-        print("ERROR: ", e)
-        exit(1)
+        # Dummy request payload. Searches over all locations to search for any employee receiving between 1 and
+        # 1 billion dollars in salary (aka, everyone).
+        payload = "_search=false&nd=1724651055477&rows=" + "10000" + f"&page={page_idx}&sidx=EAW_LST_NAM&sord=asc&year=" + str(
+            year
+        ) + "&location=ALL&firstname=&lastname=&title=&startSal=1&endSal=1000000000"
 
-    # Despite the response type being "text/json", calling `response.json()` fails immediately with the following error message:
-    # json.errors.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 1 (char 2)
-    # Thus, we convert the response.text object to have double quotes instead of single quotes.
-    # Additionally, there is an errant control character somehow embedded in response.text, which gives the error:
-    # json.decoder.JSONDecodeError: Invalid control character at: line 185849 column 69 (char 22761096)
-    # To override this, we must set the 'strict' property to false.
-    # See: https://docs.python.org/3/library/json.html#json.JSONDecoder
-    # 'If strict is false...'
+        session = requests.Session()
+        response = session.post(search_url, headers=request_headers, data=payload, timeout=20)
 
-    return json.loads(response.text.replace("\'", "\"").encode('utf-8'),
+        try:
+            response.raise_for_status()
+
+        except requests.HTTPError as err:
+            print("ERROR: ", err)
+            break
+
+        # Despite the response type being "text/json", calling `response.json()` fails immediately with the following error message:
+        # json.errors.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 1 (char 2)
+        # Thus, we convert the response.text object to have double quotes instead of single quotes.
+        # Additionally, there is an errant control character somehow embedded in response.text, which gives the error:
+        # json.decoder.JSONDecodeError: Invalid control character at: line 185849 column 69 (char 22761096)
+        # To override this, we must set the 'strict' property to false.
+        # See: https://docs.python.org/3/library/json.html#json.JSONDecoder
+        # 'If strict is false...'
+
+        curr_response_data = json.loads(response.text.replace("\'", "\"").encode('utf-8'),
                       strict=False)
+        
+        response_data.append(curr_response_data)
+
+        # print(f"[DEBUG] Queried page {page_idx}..")
+        with open("progress.txt", mode="w") as progress_file: # overwrite mode, not append
+            progress_file.write(f"Queried page {page_idx}..")
+
+        output_filename = os.path.join("output", f"response_data_{page_idx}.json")
+
+        with open(output_filename, mode="w") as response_file:
+            json.dump(curr_response_data, response_file, indent=4)
+
+        page_idx += 1
+        time.sleep(ONE_MINUTE_TO_SECONDS / random.randint(2, 6))
+
+    print(f"[DEBUG] Finished querying '{page_idx}' pages worth of UCOP data for year '{year}'")
+
+    return response_data
 
 
-def parse_salary_data_to_csv(data: dict):
+def parse_salary_data_to_csv(response_data_list, year: int) -> None:
     """
-    Takes a Python object that holds every employee's salary data; extracts that into a CSV file.
 
-    :param data: Python dict. See tests for example JSON format that is expected.
-    :return: Nothing
     """
-    # These come from website's form.
+    # These come from website's form
     column_names = [
         "id", "year", "location", "first name", "last name", "title",
         "gross pay", "regular pay", "overtime pay", "other pay"
     ]
 
-    number_of_requests_to_search_over = data['records']
+    output_csv_filename = f"UCOP_Data_{year}.csv"
+    total_num_records = 0
 
-    data_records: list = data["rows"]
+    with open(file=output_csv_filename, mode="w", encoding="utf-8") as csv_file_object:
 
-    with open("UCOP_Data.csv", "w") as csv_file_object:
         csv_writer = csv.writer(csv_file_object, delimiter=",")
-
-        # Write column names to CSV
         csv_writer.writerow(column_names)
 
-        for employee_record in data_records:
+        for response_data_idx, response_data in enumerate(response_data_list):
 
-            employee_data: list = employee_record["cell"]
+            number_of_requests_to_search_over = response_data["records"]
+            data_records: list = response_data["rows"]
+            total_num_records += len(data_records)
 
-            assert (len(employee_data) == len(column_names))
+            for employee_record in data_records:
 
-            csv_writer.writerow(employee_data)
+                employee_data: list = employee_record["cell"]
+
+                assert (len(employee_data) == len(column_names))
+
+                csv_writer.writerow(employee_data)
+
+    print(f"[DEBUG]: Finished writing '{total_num_records}' records to file '{output_csv_filename}', size='{os.path.getsize(output_csv_filename)}' bytes")
 
 
 if __name__ == "__main__":
@@ -101,4 +130,7 @@ if __name__ == "__main__":
 
     argparse_args = argparse_parser.parse_args()
 
-    parse_salary_data_to_csv(acquire_data(argparse_args.year))
+    queried_salary_data = acquire_data(argparse_args.year)
+    print(f"[DEBUG] Finished querying data for '{argparse_args.year}'")
+
+    parse_salary_data_to_csv(queried_salary_data, argparse_args.year)

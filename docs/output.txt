@@ -1,0 +1,833 @@
+                                            UNIVERSITY OF CALIFORNIA
+                                                ACADEMIC TITLES
+                                         SORTED BY TITLE CODE/ JOB CODE
+                                                     2023-24
+Title/Job                                         Salary Scale
+Code         Title/Job Descr                         Table      CTO   CTO Name
+    000800   ACADEMIC ASST TO VICE CHANC                        928   MISCELLANEOUS TITLES-SINGLE TITLES
+    000801   ACADEMIC ASST TO CHANC                             928   MISCELLANEOUS TITLES-SINGLE TITLES
+    000802   ASST VICE CHANC                                    928   MISCELLANEOUS TITLES-SINGLE TITLES
+    000803   ASSOC VICE CHANC                                   928   MISCELLANEOUS TITLES-SINGLE TITLES
+    000804   ACT/INTERIM ASSOC VICE CHANC                       928   MISCELLANEOUS TITLES-SINGLE TITLES
+    000810   GRADUATE ADVISOR                                   928   MISCELLANEOUS TITLES-SINGLE TITLES
+    000812   FACULTY ADVISOR                                    928   MISCELLANEOUS TITLES-SINGLE TITLES
+    000840   ACADEMIC COORD I-AY                       35       S46   ACADEMIC COORDINATOR
+    000841   ACADEMIC COORD I-FY                       36       S46   ACADEMIC COORDINATOR
+    000842   ACADEMIC COORD II-AY                      35       S46   ACADEMIC COORDINATOR
+    000843   ACADEMIC COORD II-FY                      36       S46   ACADEMIC COORDINATOR
+    000844   ACADEMIC COORD III-AY                     35       S46   ACADEMIC COORDINATOR
+    000845   ACADEMIC COORD III-FY                     36       S46   ACADEMIC COORDINATOR
+    000850   ACADEMIC COORD I-AY NEX                   **       S46   ACADEMIC COORDINATOR
+    000851   ACADEMIC COORD I-FY NEX                  36N       S46   ACADEMIC COORDINATOR
+    000852   ACADEMIC COORD II-AY NEX                  **       S46   ACADEMIC COORDINATOR
+    000853   ACADEMIC COORD II-FY NEX                 36N       S46   ACADEMIC COORDINATOR
+    000854   ACADEMIC COORD III-AY NEX                 **       S46   ACADEMIC COORDINATOR
+    000855   ACADEMIC COORD III-FY NEX                36N       S46   ACADEMIC COORDINATOR
+    000880   OMBUDSMAN-ACAD                                     928   MISCELLANEOUS TITLES-SINGLE TITLES
+    000900   DIRECTOR                                           S31   DIRECTOR
+    000907   ACT/INTERIM DIRECTOR                               S34   ACTING DIRECTOR
+    000910   ASSOC DIRECTOR                                     S31   DIRECTOR
+    000917   ACT/INTERIM ASSOC DIRECTOR                         S34   ACTING DIRECTOR
+    000920   ASST DIRECTOR                                      S31   DIRECTOR
+    000927   ACT/INTERIM ASST DIRECTOR                          S34   ACTING DIRECTOR
+    000961   ACADEMIC ADMINISTRATOR I NEX             34N       S56   ACADEMIC-ADMINISTRATOR
+    000962   ACADEMIC ADMINISTRATOR II NEX            34N       S56   ACADEMIC-ADMINISTRATOR
+    000963   ACADEMIC ADMINISTRATOR III NEX           34N       S56   ACADEMIC-ADMINISTRATOR
+    000964   ACADEMIC ADMINISTRATOR IV NEX            34N       S56   ACADEMIC-ADMINISTRATOR
+    000965   ACADEMIC ADMINISTRATOR V NEX             34N       S56   ACADEMIC-ADMINISTRATOR
+    000966   ACADEMIC ADMINISTRATOR VI NEX            34N       S56   ACADEMIC-ADMINISTRATOR
+    000967   ACADEMIC ADMINISTRATOR VII NEX           34N       S56   ACADEMIC-ADMINISTRATOR
+    001000   DEAN                                    DEAN       S21   DEAN
+    001007   ACT/INTERIM DEAN                        DEAN       S24   ACTING DEAN AND ACTING PROVOST
+    001010   ASSOC DEAN                                         S21   DEAN
+    001011   ASSOC DEAN-AY                                      S21   DEAN
+    001017   ACT/INTERIM ASSOC DEAN                             S24   ACTING DEAN AND ACTING PROVOST
+    001020   ASST DEAN                                          S21   DEAN
+    001027   ACT/INTERIM ASSISTANT DEAN                         S24   ACTING DEAN AND ACTING PROVOST
+    001030   DIVISIONAL DEAN                                    S26   DIVISIONAL DEAN
+    001032   ASSOC DIVISIONAL DEAN                              S26   DIVISIONAL DEAN
+    001037   ACT/INTERIM DIVISIONAL DEAN                        S24   ACTING DEAN AND ACTING PROVOST
+    001040   DEAN-EXTENDED LEARNING                             S21   DEAN
+    001044   FACULTY ASST TO CHANC                              928   MISCELLANEOUS TITLES-SINGLE TITLES
+    001045   FACULTY ASST TO VICE CHANC                         928   MISCELLANEOUS TITLES-SINGLE TITLES
+    001047   ACT/INTERIM COLLEGE PROVOST                        S24   ACTING DEAN AND ACTING PROVOST
+    001051   ASST COLLEGE PROVOST                               S27   PROVOST
+    001052   ASSOC COLLEGE PROVOST                              S27   PROVOST
+    001055   FACULTY ASST TO PROVOST/DEAN                       928   MISCELLANEOUS TITLES-SINGLE TITLES
+    001059   CHAIR-SEN ASMBLY&ACADEMIC CNCL                     928   MISCELLANEOUS TITLES-SINGLE TITLES
+    001060   COLLEGE PROVOST                                    S27   PROVOST
+    001061   ACADEMIC ADMINISTRATOR I                  34       S56   ACADEMIC-ADMINISTRATOR
+    001062   ACADEMIC ADMINISTRATOR II                 34       S56   ACADEMIC-ADMINISTRATOR
+    001063   ACADEMIC ADMINISTRATOR III                34       S56   ACADEMIC-ADMINISTRATOR
+    001064   ACADEMIC ADMINISTRATOR IV                 34       S56   ACADEMIC-ADMINISTRATOR
+    001065   ACADEMIC ADMINISTRATOR V                  34       S56   ACADEMIC-ADMINISTRATOR
+    001066   ACADEMIC ADMINISTRATOR VI                 34       S56   ACADEMIC-ADMINISTRATOR
+    001067   ACADEMIC ADMINISTRATOR VII                34       S56   ACADEMIC-ADMINISTRATOR
+    001068   VICE PROVOST                                       S27   PROVOST
+    001069   ASSOC VICE PROVOST                                 S27   PROVOST
+
+
+
+UCOP Academic Personnel and Programs             Revised 7/1/2023                                          Page 1
+                                             UNIVERSITY OF CALIFORNIA
+                                                 ACADEMIC TITLES
+                                          SORTED BY TITLE CODE/ JOB CODE
+                                                      2023-24
+Title/Job                                          Salary Scale
+Code         Title/Job Descr                          Table      CTO   CTO Name
+    001070   DIRECTOR-EAP STUDY CENTER                           927   MISCELLANEOUS TITLES-SERIES
+    001077   ACT/INTERIM VICE PROVOST                            S24   ACTING DEAN AND ACTING PROVOST
+    001087   ACT/INTERIM ASSOC VICE PROVOST                      S24   ACTING DEAN AND ACTING PROVOST
+    001092   STIPEND-RESID                                       999   SUPPLEMENTAL PAY CODES
+    001094   DEPARTMENT VICE CHAIR                               S61   DEPARTMENT CHAIRPERSON
+    001095   ACT/INTERIM DEPARTMENT CHAIR                        S64   ACTING DEPARTMENT CHAIRPERSON
+    001096   DEPARTMENT CHAIR                                    S61   DEPARTMENT CHAIRPERSON
+    001098   SUMMER DIFFERENTIAL                                 999   SUPPLEMENTAL PAY CODES
+    001099   ADMIN STIPEND                                       999   SUPPLEMENTAL PAY CODES
+    001100   PROF-AY                                     1       010   PROFESSORIAL-TENURE
+    001101   ACT PROF-AY-1/9                             1       114   ACTING PROFESSOR-SENATE
+    001103   PROF-AY-1/9                                 1       010   PROFESSORIAL-TENURE
+    001104   UNIV PROF                                           010   PROFESSORIAL-TENURE
+    001107   ACT PROF-AY                                 1       114   ACTING PROFESSOR-SENATE
+    001108   VIS PROF                                   1*       323   VISITING PROFESSOR
+    001110   PROF-FY                                     2       010   PROFESSORIAL-TENURE
+    001117   ACT PROF-FY                                 2       114   ACTING PROFESSOR-SENATE
+    001132   PROF EMERITUS(WOS)                                  016   PROFESSORIAL-EMERITUS
+    001143   PROF-AY-B/E/E                               3       010   PROFESSORIAL-TENURE
+    001144   PROF-FY-B/E/E                               4       010   PROFESSORIAL-TENURE
+    001145   PROF-AY-1/9-B/E/E                           3       010   PROFESSORIAL-TENURE
+    001180   PROF-AY-LAW                                 8       010   PROFESSORIAL-TENURE
+    001181   PROF-AY-1/9-LAW                             8       010   PROFESSORIAL-TENURE
+    001182   ACT PROF-AY-LAW                             8       114   ACTING PROFESSOR-SENATE
+    001183   ACT PROF-AY-1/9-LAW                         8       114   ACTING PROFESSOR-SENATE
+    001200   ASSOC PROF-AY                               1       010   PROFESSORIAL-TENURE
+    001201   ACT ASSOC PROF-AY-1/9                       1       114   ACTING PROFESSOR-SENATE
+    001203   ASSOC PROF-AY-1/9                           1       010   PROFESSORIAL-TENURE
+    001207   ACT ASSOC PROF-AY                           1       114   ACTING PROFESSOR-SENATE
+    001208   VIS ASSOC PROF                             1*       323   VISITING PROFESSOR
+    001210   ASSOC PROF-FY                               2       010   PROFESSORIAL-TENURE
+    001217   ACT ASSOC PROF-FY                           2       114   ACTING PROFESSOR-SENATE
+    001243   ASSOC PROF-AY-B/E/E                         3       010   PROFESSORIAL-TENURE
+    001244   ASSOC PROF-FY-B/E/E                         4       010   PROFESSORIAL-TENURE
+    001245   ASSOC PROF-AY-1/9-B/E/E                     3       010   PROFESSORIAL-TENURE
+    001300   ASST PROF-AY                                1       011   PROFESSORIAL-NON-TENURE
+    001301   ACT ASST PROF-AY-1/9                        1       124   ACTING PROFESSOR-NON-SENATE
+    001303   ASST PROF-AY-1/9                            1       011   PROFESSORIAL-NON-TENURE
+    001307   ACT ASST PROF-AY                            1       124   ACTING PROFESSOR-NON-SENATE
+    001308   VIS ASST PROF                              1*       323   VISITING PROFESSOR
+    001310   ASST PROF-FY                                2       011   PROFESSORIAL-NON-TENURE
+    001317   ACT ASST PROF-FY                            2       124   ACTING PROFESSOR-NON-SENATE
+    001343   ASST PROF-AY-B/E/E                          3       011   PROFESSORIAL-NON-TENURE
+    001344   ASST PROF-FY-B/E/E                          4       011   PROFESSORIAL-NON-TENURE
+    001345   ASST PROF-AY-1/9-B/E/E                      3       011   PROFESSORIAL-NON-TENURE
+    001403   INSTR-AY-1/9                                1       011   PROFESSORIAL-NON-TENURE
+    001450   PROF OF CLIN-FY                             2       317   PROFESSOR OF CLINICAL __________
+    001451   ASSOC PROF OF CLIN-FY                       2       317   PROFESSOR OF CLINICAL __________
+    001452   ASST PROF OF CLIN-FY                        2       317   PROFESSOR OF CLINICAL __________
+    001453   PROF OF CLIN-HCOMP                          5       317   PROFESSOR OF CLINICAL __________
+    001454   ASSOC PROF OF CLIN-HCOMP                    5       317   PROFESSOR OF CLINICAL __________
+    001455   ASST PROF OF CLIN-HCOMP                     5       317   PROFESSOR OF CLINICAL __________
+    001501   ASSOC IN ____-AY-GSHIP                     19       467   ASSOCIATE-STUDENT
+    001502   ASSOC IN __-AY-NON-GSHIP                   19       467   ASSOCIATE-STUDENT
+    001506   ASSOC IN __ -AY-1/9-GSHIP                  19       467   ASSOCIATE-STUDENT
+    001507   ASSOC IN__-AY- 1/9 -NON-GSHIP              19       467   ASSOCIATE-STUDENT
+    001508   ASSOC IN __ -AY-1/10-GSHIP                 19       467   ASSOCIATE-STUDENT
+    001509   ASSOC IN__-AY- 1/10 -NON-GSHIP             19       467   ASSOCIATE-STUDENT
+    001511   ASSOC IN __- FY-GSHIP                      19       467   ASSOCIATE-STUDENT
+    001512   ASSOC IN __-FY-NON-GSHIP                   19       467   ASSOCIATE-STUDENT
+    001540   ACT ASSOC PROF-HCOMP                        5       114   ACTING PROFESSOR-SENATE
+
+
+
+UCOP Academic Personnel and Programs             Revised 7/1/2023                                         Page 2
+                                            UNIVERSITY OF CALIFORNIA
+                                                ACADEMIC TITLES
+                                        SORTED BY TITLE CODE/ JOB CODE
+                                                     2023-24
+Title/Job                                         Salary Scale
+Code         Title/Job Descr                         Table      CTO  CTO Name
+    001542   ACT PROF-HCOMP                             5       114  ACTING PROFESSOR-SENATE
+    001550   LECT IN SUMMER SESSION                             357  INSTRUCTIONAL ASSISTANT
+    001564   ACT ASST PROF-HCOMP                        5       124  ACTING PROFESSOR-NON-SENATE
+    001580   ACT SR LECT SOE-AY                        1-L      214  ACTING LECTURER-SOE
+    001581   ACT LECT SOE-AY                           1-L      214  ACTING LECTURER-SOE
+    001582   ACT LECT PSOE-AY                          1-L      224  ACTING LECTURER-PSOE
+    001583   ACT SR LECT SOE-FY                        2-L      214  ACTING LECTURER-SOE
+    001584   ACT LECT SOE-FY                           2-L      214  ACTING LECTURER-SOE
+    001585   ACT LECT PSOE-FY                          2-L      224  ACTING LECTURER-PSOE
+    001586   ACT SR LECT SOE-AY-B/E/E                  3-L      214  ACTING LECTURER-SOE
+    001587   ACT LECT SOE-AY-B/E/E                     3-L      214  ACTING LECTURER-SOE
+    001588   ACT LECT PSOE-AY-B/E/E                    3-L      224  ACTING LECTURER-PSOE
+    001589   ACT SR LECT SOE-FY-B/E/E                  4-L      214  ACTING LECTURER-SOE
+    001590   ACT LECT SOE-FY-B/E/E                     4-L      214  ACTING LECTURER-SOE
+    001591   ACT LECT PSOE-FY-B/E/E                    4-L      224  ACTING LECTURER-PSOE
+    001592   ACT SR LECT SOE-AY-LAW                    8-L      214  ACTING LECTURER-SOE
+    001593   ACT LECT PSOE-AY-LAW                      8-L      224  ACTING LECTURER-PSOE
+    001594   ACT SR LECT SOE-SFT-VM                    7-L      214  ACTING LECTURER-SOE
+    001595   ACT LECT SOE-SFT-VM                       7-L      214  ACTING LECTURER-SOE
+    001596   ACT LECT PSOE-SFT-VM                      7-L      224  ACTING LECTURER-PSOE
+    001597   ACT SR LECT SOE-HCOMP                     5-L      214  ACTING LECTURER-SOE
+    001598   ACT LECT SOE-HCOMP                        5-L      214  ACTING LECTURER-SOE
+    001599   ACT LECT PSOE-HCOMP                       5-L      224  ACTING LECTURER-PSOE
+    001603   SR LECT SOE-AY                            1-L      210  LECTURER-SECURITY OF EMPLOYMENT
+    001604   SR LECT SOE-AY-1/9                        1-L      210  LECTURER-SECURITY OF EMPLOYMENT
+    001607   LECT SOE-AY                               1-L      210  LECTURER-SECURITY OF EMPLOYMENT
+    001608   LECT SOE-AY-1/9                           1-L      210  LECTURER-SECURITY OF EMPLOYMENT
+    001612   SR LECT SOE-AY-1/10                       1-L      210  LECTURER-SECURITY OF EMPLOYMENT
+    001613   SR LECT SOE-FY                            2-L      210  LECTURER-SECURITY OF EMPLOYMENT
+    001614   LECT SOE-AY-1/10                          1-L      210  LECTURER-SECURITY OF EMPLOYMENT
+    001617   LECT SOE-FY                               2-L      210  LECTURER-SECURITY OF EMPLOYMENT
+    001618   LECT SOE-HCOMP                            5-L      210  LECTURER-SECURITY OF EMPLOYMENT
+    001619   SR LECT SOE-HCOMP                         5-L      210  LECTURER-SECURITY OF EMPLOYMENT
+    001620   LECT SOE-EMERITUS(WOS)                             216  LECTURER-SOE-EMERITUS
+    001621   SR LECT SOE-EMERITUS (WOS)                         216  LECTURER-SOE-EMERITUS
+    001630   LECT-AY                                   15       225  LECTURER
+    001631   LECT-AY-CONTINUING                        16       225  LECTURER
+    001632   LECT-AY-1/9                               15       225  LECTURER
+    001633   LECT-AY-1/9-CONTINUING                    16       225  LECTURER
+    001634   LECT-FY                                   15       225  LECTURER
+    001635   LECT-FY-CONTINUING                        16       225  LECTURER
+    001636   LECT-AY-1/10                              15       225  LECTURER
+    001637   LECT-AY-1/10-CONTINUING                   16       225  LECTURER
+    001638   PRE-SIX YR APPT-TEMP SUPP-FY              15       225  LECTURER
+    001641   SR LECT-AY-CONTINUING                     16       225  LECTURER
+    001643   SR LECT-AY-1/9-CONTINUING                 16       225  LECTURER
+    001645   SR LECT-FY-CONTINUING                     16       225  LECTURER
+    001647   SR LECT-AY-1/10-CONTINUING                16       225  LECTURER
+    001648   PRE-SIX YR APPT-TEMP SUPP-AY              15       225  LECTURER
+    001649   PRE-SIX YR APPT-TEMP SUPP-1/9             15       225  LECTURER
+    001650   LECT-MISCELLANEOUS/PART TIME                       928  MISCELLANEOUS TITLES-SINGLE TITLES
+    001651   PRE-SIX YR APPT-TEMP SUPP-1/10            15       225  LECTURER
+    001652   CONTINUING APPT-TEMP AUG-AY               16       225  LECTURER
+    001653   CONTINUING APPT-TEMP AUG-1/9              16       225  LECTURER
+    001654   CONTINUING APPT-TEMP-AUG-1/10             16       225  LECTURER
+    001655   CONTINUING APPT-TEMP AUG-FY               16       225  LECTURER
+    001656   SR LECT SOE-AY-1/9-LAW                    8-L      210  LECTURER-SECURITY OF EMPLOYMENT
+    001657   LECT PSOE-AY-1/9-LAW                      8-L      211  LECTURER-PSOE-SENATE
+    001658   SR LECT SOE-AY-1/10-LAW                   8-L      210  LECTURER-SECURITY OF EMPLOYMENT
+    001659   LECT PSOE-AY-1/10-LAW                     8-L      211  LECTURER-PSOE-SENATE
+    001668   SR LECT SOE-SFT-VM                        7-L      210  LECTURER-SECURITY OF EMPLOYMENT
+
+
+
+UCOP Academic Personnel and Programs            Revised 7/1/2023                                          Page 3
+                                          UNIVERSITY OF CALIFORNIA
+                                              ACADEMIC TITLES
+                                       SORTED BY TITLE CODE/ JOB CODE
+                                                   2023-24
+Title/Job                                       Salary Scale
+Code         Title/Job Descr                       Table      CTO   CTO Name
+    001669   LECT SOE-SFT-VM                         7-L      210   LECTURER-SECURITY OF EMPLOYMENT
+    001670   LECT PSOE-SFT-VM                        7-L      211   LECTURER-PSOE-SENATE
+    001672   SR LECT SOE-AY-1/10-B/E/E               3-L      210   LECTURER-SECURITY OF EMPLOYMENT
+    001673   LECT SOE-AY-1/10-B/E/E                  3-L      210   LECTURER-SECURITY OF EMPLOYMENT
+    001674   LECT PSOE-AY-1/10-B/E/E                 3-L      211   LECTURER-PSOE-SENATE
+    001675   EDUCATOR (WOS)                                   928   MISCELLANEOUS TITLES-SINGLE TITLES
+    001678   LECT PSOE-AY-1/10                       1-L      211   LECTURER-PSOE-SENATE
+    001679   LECT PSOE-HCOMP                         5-L      211   LECTURER-PSOE-SENATE
+    001680   LECT PSOE-AY                            1-L      211   LECTURER-PSOE-SENATE
+    001681   LECT PSOE-AY-1/9                        1-L      211   LECTURER-PSOE-SENATE
+    001682   LECT PSOE-FY                            2-L      211   LECTURER-PSOE-SENATE
+    001686   SR LECT SOE-AY-B/E/E                    3-L      210   LECTURER-SECURITY OF EMPLOYMENT
+    001687   LECT SOE-AY-B/E/E                       3-L      210   LECTURER-SECURITY OF EMPLOYMENT
+    001688   LECT PSOE-AY-B/E/E                      3-L      211   LECTURER-PSOE-SENATE
+    001689   SR LECT SOE-FY-B/E/E                    4-L      210   LECTURER-SECURITY OF EMPLOYMENT
+    001690   LECT SOE-FY-B/E/E                       4-L      210   LECTURER-SECURITY OF EMPLOYMENT
+    001691   LECT PSOE-FY-B/E/E                      4-L      211   LECTURER-PSOE-SENATE
+    001692   SR LECT SOE-AY-1/9-B/E/E                3-L      210   LECTURER-SECURITY OF EMPLOYMENT
+    001693   SR LECT SOE-AY-LAW                      8-L      210   LECTURER-SECURITY OF EMPLOYMENT
+    001694   LECT PSOE-AY-LAW                        8-L      211   LECTURER-PSOE-SENATE
+    001695   LECT SOE-AY-1/9-B/E/E                   3-L      210   LECTURER-SECURITY OF EMPLOYMENT
+    001696   LECT PSOE-AY-1/9-B/E/E                  3-L      211   LECTURER-PSOE-SENATE
+    001699   RECALL TEACHING NON-SENATE              1*       012   PROFESSORIAL-RECALL
+    001700   RECALL TEACHING                         1*       012   PROFESSORIAL-RECALL
+    001701   RECALL HCOMP                            5*       012   PROFESSORIAL-RECALL
+    001702   RECALL FACULTY                          1*       012   PROFESSORIAL-RECALL
+    001712   VIS ASST PROF-HCOMP                     5*       323   VISITING PROFESSOR
+    001713   VIS ASSOC PROF-HCOMP                    5*       323   VISITING PROFESSOR
+    001714   VIS PROF-HCOMP                          5*       323   VISITING PROFESSOR
+    001715   INSTR-HCOMP                              5       011   PROFESSORIAL-NON-TENURE
+    001717   ASST PROF-HCOMP                          5       011   PROFESSORIAL-NON-TENURE
+    001719   ASSOC PROF-HCOMP                         5       010   PROFESSORIAL-TENURE
+    001721   PROF-HCOMP                               5       010   PROFESSORIAL-TENURE
+    001723   INSTR IN RES-HCOMP                       5       311   PROFESSOR IN RESIDENCE
+    001724   ASST PROF IN RES-HCOMP                   5       311   PROFESSOR IN RESIDENCE
+    001725   ASSOC PROF IN RES-HCOMP                  5       311   PROFESSOR IN RESIDENCE
+    001726   PROF IN RES-HCOMP                        5       311   PROFESSOR IN RESIDENCE
+    001727   ADJ INSTR-HCOMP                          5       335   ADJUNCT PROFESSOR
+    001728   ASST ADJ PROF-HCOMP                      5       335   ADJUNCT PROFESSOR
+    001729   ASSOC ADJ PROF-HCOMP                     5       335   ADJUNCT PROFESSOR
+    001730   ADJ PROF-HCOMP                           5       335   ADJUNCT PROFESSOR
+    001731   HS CLIN INSTR-HCOMP                      5       341   HEALTH SCIENCES CLINICAL PROFESSOR
+    001732   HS ASST CLIN PROF-HCOMP                  5       341   HEALTH SCIENCES CLINICAL PROFESSOR
+    001733   HS ASSOC CLIN PROF-HCOMP                 5       341   HEALTH SCIENCES CLINICAL PROFESSOR
+    001734   HS CLIN PROF-HCOMP                       5       341   HEALTH SCIENCES CLINICAL PROFESSOR
+    001895   INSTR-SFT-VM                             7       011   PROFESSORIAL-NON-TENURE
+    001897   ASST PROF-SFT-VM                         7       011   PROFESSORIAL-NON-TENURE
+    001898   ACT ASST PROF-SFT-VM                     7       124   ACTING PROFESSOR-NON-SENATE
+    001899   ASSOC PROF-SFT-VM                        7       010   PROFESSORIAL-TENURE
+    001900   ACT ASSOC PROF-SFT-VM                    7       114   ACTING PROFESSOR-SENATE
+    001901   PROF-SFT-VM                              7       010   PROFESSORIAL-TENURE
+    001902   ACT PROF-SFT-VM                          7       114   ACTING PROFESSOR-SENATE
+    001904   ASST PROF IN RES-SFT-VM                  7       311   PROFESSOR IN RESIDENCE
+    001905   ASSOC PROF IN RES-SFT-VM                 7       311   PROFESSOR IN RESIDENCE
+    001906   PROF IN RES-SFT-VM                       7       311   PROFESSOR IN RESIDENCE
+    001908   ASST ADJ PROF-SFT-VM                     7       335   ADJUNCT PROFESSOR
+    001909   ASSOC ADJ PROF-SFT-VM                    7       335   ADJUNCT PROFESSOR
+    001910   ADJ PROF-SFT-VM                          7       335   ADJUNCT PROFESSOR
+    001911   HS CLIN INSTR-SFT-VM                     7       341   HEALTH SCIENCES CLINICAL PROFESSOR
+    001912   HS ASST CLIN PROF-SFT-VM                 7       341   HEALTH SCIENCES CLINICAL PROFESSOR
+    001913   HS ASSOC CLIN PROF-SFT-VM                7       341   HEALTH SCIENCES CLINICAL PROFESSOR
+
+
+
+UCOP Academic Personnel and Programs           Revised 7/1/2023                                      Page 4
+                                             UNIVERSITY OF CALIFORNIA
+                                                 ACADEMIC TITLES
+                                          SORTED BY TITLE CODE/ JOB CODE
+                                                      2023-24
+Title/Job                                          Salary Scale
+Code         Title/Job Descr                          Table      CTO   CTO Name
+    001914   HS CLIN PROF-SFT-VM                         7       341   HEALTH SCIENCES CLINICAL PROFESSOR
+    001915   ASST PROF OF CLIN-SFT-VM                    7       317   PROFESSOR OF CLINICAL __________
+    001916   ASSOC PROF OF CLIN-SFT-VM                   7       317   PROFESSOR OF CLINICAL __________
+    001917   PROF OF CLIN-SFT-VM                         7       317   PROFESSOR OF CLINICAL __________
+    001935   RES SCRIPPS-AY                                      541   PROFESSIONAL RESEARCH-REGULAR
+    001936   ASSOC RES SCRIPPS-AY                                541   PROFESSIONAL RESEARCH-REGULAR
+    001937   ASST RES SCRIPPS-AY                                 541   PROFESSIONAL RESEARCH-REGULAR
+    001958   REGENTS' PROF                                       928   MISCELLANEOUS TITLES-SINGLE TITLES
+    001968   REGENTS' LECT                                       928   MISCELLANEOUS TITLES-SINGLE TITLES
+    001969   HHMI INVESTIGATOR                                   928   MISCELLANEOUS TITLES-SINGLE TITLES
+    001970   LUDWIG INVESTIGATOR                                 928   MISCELLANEOUS TITLES-SINGLE TITLES
+    001971   ACT PROF-AY-B/E/E                           3       114   ACTING PROFESSOR-SENATE
+    001972   ACT PROF-FY-B/E/E                           4       114   ACTING PROFESSOR-SENATE
+    001973   ACT PROF-AY-1/9-B/E/E                       3       114   ACTING PROFESSOR-SENATE
+    001974   ACT ASSOC PROF-AY-B/E/E                     3       114   ACTING PROFESSOR-SENATE
+    001975   ACT ASSOC PROF-FY-B/E/E                     4       114   ACTING PROFESSOR-SENATE
+    001976   ACT ASSOC PROF-AY-1/9-B/E/E                 3       114   ACTING PROFESSOR-SENATE
+    001977   ACT ASST PROF-AY-B/E/E                      3       124   ACTING PROFESSOR-NON-SENATE
+    001978   ACT ASST PROF-FY-B/E/E                      4       124   ACTING PROFESSOR-NON-SENATE
+    001979   ACT ASST PROF-AY-1/9-B/E/E                  3       124   ACTING PROFESSOR-NON-SENATE
+    001981   RES-LR SCL-AY-B/E/E                         3       541   PROFESSIONAL RESEARCH-REGULAR
+    001982   RES-LR SCL-AY-1/9-B/E/E                     3       541   PROFESSIONAL RESEARCH-REGULAR
+    001983   ASSOC RES-LR SCL-AY-B/E/E                   3       541   PROFESSIONAL RESEARCH-REGULAR
+    001984   ASSOC RES-LR SCL-AY-1/9-B/E/E               3       541   PROFESSIONAL RESEARCH-REGULAR
+    001985   ASST RES-LR SCL-AY-B/E/E                    3       541   PROFESSIONAL RESEARCH-REGULAR
+    001986   ASST RES-LR SCL-AY-1/9-B/E/E                3       541   PROFESSIONAL RESEARCH-REGULAR
+    001987   RES-FY-B/E/E                              14B       541   PROFESSIONAL RESEARCH-REGULAR
+    001988   ASSOC RES-FY-B/E/E                        14B       541   PROFESSIONAL RESEARCH-REGULAR
+    001989   ASST RES-FY-B/E/E                         14B       541   PROFESSIONAL RESEARCH-REGULAR
+    001990   RES-LR SCL-FY-B/E/E                         4       541   PROFESSIONAL RESEARCH-REGULAR
+    001991   ASSOC RES-LR SCL-FY-B/E/E                   4       541   PROFESSIONAL RESEARCH-REGULAR
+    001992   ASST RES-LR SCL-FY-B/E/E                    4       541   PROFESSIONAL RESEARCH-REGULAR
+    001993   RES-FY-B/E/E-NON REP                      14A       541   PROFESSIONAL RESEARCH-REGULAR
+    001994   ASSOC RES-FY-B/E/E-NON REP                14A       541   PROFESSIONAL RESEARCH-REGULAR
+    001995   ASST RES-FY-B/E/E-NON REP                 14A       541   PROFESSIONAL RESEARCH-REGULAR
+    001997   RES-FY-B/E/E NEX                         14B(N)     541   PROFESSIONAL RESEARCH-REGULAR
+    001998   ASSOC RES-FY-B/E/E NEX                   14B(N)     541   PROFESSIONAL RESEARCH-REGULAR
+    001999   ASST RES-FY-B/E/E NEX                    14B(N)     541   PROFESSIONAL RESEARCH-REGULAR
+    002000   HS CLIN PROF-AY                             1       341   HEALTH SCIENCES CLINICAL PROFESSOR
+    002007   RES-FY-B/E/E NEX NON REP                 14A(N)     541   PROFESSIONAL RESEARCH-REGULAR
+    002008   ASSOC RES-FY-B/E/E NEX NON REP           14A(N)     541   PROFESSIONAL RESEARCH-REGULAR
+    002009   ASST RES-FY-B/E/E NEX NON REP            14A(N)     541   PROFESSIONAL RESEARCH-REGULAR
+    002010   HS CLIN PROF-FY                             2       341   HEALTH SCIENCES CLINICAL PROFESSOR
+    002017   CLIN PROF-VOL                                       346   CLINICAL PROFESSOR - VOLUNTEER
+    002020   HS ASSOC CLIN PROF-AY                       1       341   HEALTH SCIENCES CLINICAL PROFESSOR
+    002030   HS ASSOC CLIN PROF-FY                       2       341   HEALTH SCIENCES CLINICAL PROFESSOR
+    002037   ASSOC CLIN PROF-VOL                                 346   CLINICAL PROFESSOR - VOLUNTEER
+    002040   HS ASST CLIN PROF-AY                        1       341   HEALTH SCIENCES CLINICAL PROFESSOR
+    002050   HS ASST CLIN PROF-FY                        2       341   HEALTH SCIENCES CLINICAL PROFESSOR
+    002057   ASST CLIN PROF-VOL                                  346   CLINICAL PROFESSOR - VOLUNTEER
+    002060   HS CLIN INSTR-AY                            1       341   HEALTH SCIENCES CLINICAL PROFESSOR
+    002070   HS CLIN INSTR-FY                            2       341   HEALTH SCIENCES CLINICAL PROFESSOR
+    002077   CLIN INSTR-VOL                                      346   CLINICAL PROFESSOR - VOLUNTEER
+    002081   CLIN ASSOCIATE-FY                                   928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002210   DEMO TEACHER                                        928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002211   DEMO TEACHER-CONTINUING                             928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002220   SUPV TEACHER ED-AY                         32       357   INSTRUCTIONAL ASSISTANT
+    002221   SUPV TEACHER ED-AY-CONTINUING              32       357   INSTRUCTIONAL ASSISTANT
+    002222   SUPV TEACHER ED-FY                         33       357   INSTRUCTIONAL ASSISTANT
+    002223   SUPV TEACHER ED-FY-CONTINUING              33       357   INSTRUCTIONAL ASSISTANT
+    002240   COORD FLD WK-AY                            15       357   INSTRUCTIONAL ASSISTANT
+
+
+
+UCOP Academic Personnel and Programs            Revised 7/1/2023                                        Page 5
+                                            UNIVERSITY OF CALIFORNIA
+                                                ACADEMIC TITLES
+                                         SORTED BY TITLE CODE/ JOB CODE
+                                                     2023-24
+Title/Job                                         Salary Scale
+Code         Title/Job Descr                         Table      CTO   CTO Name
+    002241   COORD FLD WK-AY-CONTINUING                16       357   INSTRUCTIONAL ASSISTANT
+    002245   COORD FLD WK-FY                           15       357   INSTRUCTIONAL ASSISTANT
+    002246   COORD FLD WK-FY-CONTINUING                16       357   INSTRUCTIONAL ASSISTANT
+    002250   FLD WK SUPV-AY                            15       357   INSTRUCTIONAL ASSISTANT
+    002251   FLD WK SUPV-AY-CONTINUING                 16       357   INSTRUCTIONAL ASSISTANT
+    002255   FLD WK SUPV-FY                            15       357   INSTRUCTIONAL ASSISTANT
+    002256   FLD WK SUPV-FY-CONTINUING                 16       357   INSTRUCTIONAL ASSISTANT
+    002260   FLD WK CONSULT-AY                         15       357   INSTRUCTIONAL ASSISTANT
+    002261   FLD WK CONSULT-AY-CONTINUING              16       357   INSTRUCTIONAL ASSISTANT
+    002265   FLD WK CONSULT-FY                         15       357   INSTRUCTIONAL ASSISTANT
+    002266   FLD WK CONSULT-FY-CONTINUING              16       357   INSTRUCTIONAL ASSISTANT
+    002270   REMD TUT I-NON GSHIP/NON REP              20       456   OTHER STUDENT TITLES
+    002271   REMD TUT I-GSHIP/NON REP                  20       456   OTHER STUDENT TITLES
+    002272   REMD TUT II NON-GSHIP/NON REP             20       456   OTHER STUDENT TITLES
+    002273   REMD TUT II-GSHIP/NON REP                 20       456   OTHER STUDENT TITLES
+    002280   REMD TUT I-NON GSHIP                      20       456   OTHER STUDENT TITLES
+    002284   CHILD DEV DEMO LECT-CONTINUING            16       928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002285   CHILD DEV DEMO LECT                       15       928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002288   REMD TUT I-GSHIP                          20       456   OTHER STUDENT TITLES
+    002289   REMD TUT II-GSHIP                         20       456   OTHER STUDENT TITLES
+    002290   REMD TUT II-NON GSHIP                     20       456   OTHER STUDENT TITLES
+    002300   TEACHG FELLOW-GSHIP                       18       426   TEACHING ASSISTANT & EQUIVALENT
+    002301   TEACHG FELLOW-NON GSHIP                   18       426   TEACHING ASSISTANT & EQUIVALENT
+    002302   TEACHG FELLOW-GSHIP/NON REP               18       426   TEACHING ASSISTANT & EQUIVALENT
+    002303   TEACHG FELLOW-NON GSHIP/NONREP            18       426   TEACHING ASSISTANT & EQUIVALENT
+    002310   TEACHG ASST-GSHIP                         18       426   TEACHING ASSISTANT & EQUIVALENT
+    002311   TEACHG ASST-NON GSHIP                     18       426   TEACHING ASSISTANT & EQUIVALENT
+    002312   TEACHG ASST-GSHIP/NON REP                 18       426   TEACHING ASSISTANT & EQUIVALENT
+    002313   TEACHG ASST-NON GSHIP/NON REP             18       426   TEACHING ASSISTANT & EQUIVALENT
+    002320   TEACHG ASST-1/10-GSHIP                    18       426   TEACHING ASSISTANT & EQUIVALENT
+    002321   TEACHG ASST-1/10-NON GSHIP                18       426   TEACHING ASSISTANT & EQUIVALENT
+    002382   K-12 ASST-NON GSHIP/NONREP                         456   OTHER STUDENT TITLES
+    002427   SUBSTITUTE TEACHER                                 928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002428   SUBSTITUTE TEACHER-CONTINUING                      928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002430   GEFFEN K-12 INSTRUCTOR-AY                          928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002431   GEFFEN K-12 INSTRUCTOR-AY-CONT                     928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002432   GEFFEN K-12 INSTRUCTOR-AY-1/10                     928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002433   GEFFEN K-12 INSTR-AY-1/10-CONT                     928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002434   GEFFEN K-12 INSTR SUMMER PROG                      928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002440   K-12 INSTRUCTOR-AY                                 928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002441   K-12 INSTRUCTOR-AY-1/10                            928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002442   K-12 DAILY SUBSTITUTE/NONREP                       928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002447   PREUSS K-12 COUNSELOR-AY                           928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002448   PREUSS K-12 COUNSELOR-AY-1/10                      928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002460   TEACHER-SPEC PROG                                  928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002461   TEACHER-SPEC PROG-CONTINUING                       928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002500   READER-NON STDNT                          18       928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002510   TUT-NON STDNT                                      928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002520   READER-NON STDNT/NON REP                  18       928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002521   TUT-NON STDNT/NON REP                              928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002600   MILITARY/AIR SCI&TACTICS ASST             25       928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002650   TEACHER-LHS                                        928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002651   TEACHER-LHS-CONTINUING                             928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002708   RESID PHYS I/NON REP                      21       446   INTERN OR RESIDENT
+    002709   RESID PHYS I/REP                                   446   INTERN OR RESIDENT
+    002714   INTERN-VET MED/NON REP                    21       446   INTERN OR RESIDENT
+    002715   INTERN-CLINICAL PSYCHOLOGY                21       446   INTERN OR RESIDENT
+    002716   INTERN-CLIN PSYCH-GENL CAMP               21       928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002723   RESID PHYS II-VIII/REP                             446   INTERN OR RESIDENT
+    002724   RESID PHYS II-VIII/NON REP                21       446   INTERN OR RESIDENT
+    002725   CHIEF RESID PHYS-NON REP                           446   INTERN OR RESIDENT
+
+
+
+UCOP Academic Personnel and Programs             Revised 7/1/2023                                          Page 6
+                                           UNIVERSITY OF CALIFORNIA
+                                               ACADEMIC TITLES
+                                        SORTED BY TITLE CODE/ JOB CODE
+                                                    2023-24
+Title/Job                                        Salary Scale
+Code         Title/Job Descr                        Table      CTO   CTO Name
+    002726   RESID PHYS/SUBSPEC 4-8/NON REP           21       446   INTERN OR RESIDENT
+    002727   POST DDS I-VI/NON REP                    21       446   INTERN OR RESIDENT
+    002730   RESID-VET MED/NON REP                    21       446   INTERN OR RESIDENT
+    002732   OTH POST-MD TRAIN 2-8/NON REP            21       446   INTERN OR RESIDENT
+    002733   OTH POST-MD TRAIN 2-8/REP                         446   INTERN OR RESIDENT
+    002735   STIPEND-OTH POST-MD TRAIN                         999   SUPPLEMENTAL PAY CODES
+    002736   RESID PHYS/SUBSPEC 4-8/REP                        446   INTERN OR RESIDENT
+    002737   OTH POST DDS/NON REP                     21       446   INTERN OR RESIDENT
+    002738   CHIEF RESID PHYS-REP                              446   INTERN OR RESIDENT
+    002740   NON-PHYS CLIN TRAIN                      21       446   INTERN OR RESIDENT
+    002741   NON-PHYS CLIN TRAIN-GENL CAMP            21       928   MISCELLANEOUS TITLES-SINGLE TITLES
+    002743   RESID PHYS I/REP-OV                               446   INTERN OR RESIDENT
+    002744   RESID PHYS II-VIII/REP-OV                         446   INTERN OR RESIDENT
+    002745   CHIEF RESID PHYS-REP-OV                           446   INTERN OR RESIDENT
+    002746   RESID PHYS/SUBSPEC 4-8/REP-OV                     446   INTERN OR RESIDENT
+    002747   OTH POST-MD TRAIN 2-8/REP-OV                      446   INTERN OR RESIDENT
+    002749   RESID PHYS/SUBSPEC/T32/NON REP                    446   INTERN OR RESIDENT
+    002750   RESID PHYS/SUBSPEC/T32/REP                        446   INTERN OR RESIDENT
+    002753   RESID PHYS MOONLTNG NON REP                       446   INTERN OR RESIDENT
+    002754   RESID PHYS MOONLTNG REP                           446   INTERN OR RESIDENT
+    002757   POST DDS I-VI/REP                                 446   INTERN OR RESIDENT
+    002758   OTH POST DDS/REP                                  446   INTERN OR RESIDENT
+    002760   RESID PHYS I/REP-FNO                              446   INTERN OR RESIDENT
+    002761   RESID PHYS II-VIII/REP-FNO                        446   INTERN OR RESIDENT
+    002762   CHIEF RESID PHYS-REP-FNO                          446   INTERN OR RESIDENT
+    002763   RESID PHYS/SUBSPEC 4-8/REP-FNO                    446   INTERN OR RESIDENT
+    002764   OTH POST-MD TRAIN 2-8/REP-FNO                     446   INTERN OR RESIDENT
+    002766   HEAL OTH POST-MD 4-6/REP                          446   INTERN OR RESIDENT
+    002850   READER-GSHIP                             18       456   OTHER STUDENT TITLES
+    002851   READER-NON GSHIP                         18       456   OTHER STUDENT TITLES
+    002852   SPECIAL READER-UCLA-GSHIP                         456   OTHER STUDENT TITLES
+    002853   SPECIAL READER-UCLA-NON GSHIP                     456   OTHER STUDENT TITLES
+    002854   READER-GSHIP/NON REP                     18       456   OTHER STUDENT TITLES
+    002855   READER-NON GSHIP/NON REP                 18       456   OTHER STUDENT TITLES
+    002860   TUT-GSHIP                                         456   OTHER STUDENT TITLES
+    002861   TUT-NON GSHIP                                     456   OTHER STUDENT TITLES
+    002862   TUT-GSHIP/NON REP                                 456   OTHER STUDENT TITLES
+    002863   TUT-NON GSHIP/NON REP                             456   OTHER STUDENT TITLES
+    003000   AGRON AES                                 2       530   AGRONOMIST-TENURE
+    003001   AGRON AES-SFT-VM                          7       530   AGRONOMIST-TENURE
+    003004   SPECIALIST AES                          24A       557   SPECIALIST IN A.E.S.
+    003007   ACT AGRON AES                             2       534   AGRONOMIST-ACTING
+    003009   ACT AGRON AES-SFT-VM                      7       534   AGRONOMIST-ACTING
+    003010   ASSOC AGRON AES                           2       530   AGRONOMIST-TENURE
+    003011   ASSOC AGRON AES-SFT-VM                    7       530   AGRONOMIST-TENURE
+    003012   AGRON AES-B/E/E                           4       530   AGRONOMIST-TENURE
+    003013   ASSOC AGRON AES-B/E/E                     4       530   AGRONOMIST-TENURE
+    003014   ASSOC SPECIALIST AES                    24A       557   SPECIALIST IN A.E.S.
+    003015   ASST AGRON AES-B/E/E                      4       531   AGRONOMIST-NON-TENURE
+    003017   ACT ASSOC AGRON AES                       2       534   AGRONOMIST-ACTING
+    003019   ACT ASSOC AGRON AES-SFT-VM                7       534   AGRONOMIST-ACTING
+    003020   ASST AGRON AES                            2       531   AGRONOMIST-NON-TENURE
+    003021   ASST AGRON AES-SFT-VM                     7       531   AGRONOMIST-NON-TENURE
+    003024   ASST SPECIALIST AES                     24A       557   SPECIALIST IN A.E.S.
+    003027   ACT ASST AGRON AES                        2       534   AGRONOMIST-ACTING
+    003029   ACT ASST AGRON AES-SFT-VM                 7       534   AGRONOMIST-ACTING
+    003044   ACT AGRON AES-B/E/E                       4       534   AGRONOMIST-ACTING
+    003045   ACT ASSOC AGRON AES-B/E/E                 4       534   AGRONOMIST-ACTING
+    003046   ACT ASST AGRON AES-B/E/E                  4       534   AGRONOMIST-ACTING
+    003060   AGRON AES-AY                              1       530   AGRONOMIST-TENURE
+    003062   AGRON AES-B/E/E-AY                        3       530   AGRONOMIST-TENURE
+
+
+
+UCOP Academic Personnel and Programs            Revised 7/1/2023                                          Page 7
+                                           UNIVERSITY OF CALIFORNIA
+                                               ACADEMIC TITLES
+                                        SORTED BY TITLE CODE/ JOB CODE
+                                                    2023-24
+Title/Job                                        Salary Scale
+Code         Title/Job Descr                        Table      CTO   CTO Name
+    003064   ACT AGRON AES-AY                          1       534   AGRONOMIST-ACTING
+    003066   ACT AGRON AES-B/E/E-AY                    3       534   AGRONOMIST-ACTING
+    003070   ASSOC AGRON AES-AY                        1       530   AGRONOMIST-TENURE
+    003072   ASSOC AGRON AES-AY-B/E/E                  3       530   AGRONOMIST-TENURE
+    003074   ACT ASSOC AGRON AES-AY                    1       534   AGRONOMIST-ACTING
+    003076   ACT ASSOC AGRON AES-B/E/E-AY              3       534   AGRONOMIST-ACTING
+    003080   ASST AGRON AES-AY                         1       531   AGRONOMIST-NON-TENURE
+    003082   ASST AGRON AES-AY-B/E/E                   3       531   AGRONOMIST-NON-TENURE
+    003084   ACT ASST AGRON AES-AY                     1       534   AGRONOMIST-ACTING
+    003086   ACT ASST AGRON AES-B/E/E/-AY              3       534   AGRONOMIST-ACTING
+    003100   ASTRONOMER                                2       520   ASTRONOMER-TENURE
+    003104   SPECIALIST AES NEX                     24A(N)     557   SPECIALIST IN A.E.S.
+    003110   ASSOC ASTRONOMER                          2       520   ASTRONOMER-TENURE
+    003114   ASSOC SPECIALIST AES NEX               24A(N)     557   SPECIALIST IN A.E.S.
+    003124   ASST SPECIALIST AES NEX                24A(N)     557   SPECIALIST IN A.E.S.
+    003140   GSR-FELLOWSHIP-NO REM                    22       436   GRADUATE STUDENT RESEARCHER
+    003141   GSR-FELLOWSHIP-TUIT&FEE REM              22       436   GRADUATE STUDENT RESEARCHER
+    003150   GSR-TRAINEE-NO REM                       22       436   GRADUATE STUDENT RESEARCHER
+    003151   GSR-TRAINEE-TUIT&FEE REM                 22       436   GRADUATE STUDENT RESEARCHER
+    003160   GSR TRAINEE/FELLOW SUPPLEMENT            22       436   GRADUATE STUDENT RESEARCHER
+    003170   RES-FY NEX                             13B(N)     541   PROFESSIONAL RESEARCH-REGULAR
+    003171   RES-FY NEX NON REP                     13A(N)     541   PROFESSIONAL RESEARCH-REGULAR
+    003176   RES-SFT NEX                                       541   PROFESSIONAL RESEARCH-REGULAR
+    003178   VIS RES NEX                           13A(N)*     543   PROFESSIONAL RESEARCH-VISITING
+    003180   ASSOC RES-FY NEX                       13B(N)     541   PROFESSIONAL RESEARCH-REGULAR
+    003181   ASSOC RES-FY NEX NON REP               13A(N)     541   PROFESSIONAL RESEARCH-REGULAR
+    003186   ASSOC RES-SFT NEX                                 541   PROFESSIONAL RESEARCH-REGULAR
+    003188   VIS ASSOC RES NEX                     13A(N)*     543   PROFESSIONAL RESEARCH-VISITING
+    003190   ASST RES-FY NEX                        13B(N)     541   PROFESSIONAL RESEARCH-REGULAR
+    003191   ASST RES-FY NEX NON REP                13A(N)     541   PROFESSIONAL RESEARCH-REGULAR
+    003196   ASST RES-SFT NEX                                  541   PROFESSIONAL RESEARCH-REGULAR
+    003198   VIS ASST RES NEX                      13A(N)*     543   PROFESSIONAL RESEARCH-VISITING
+    003200   RES-FY                                  13B       541   PROFESSIONAL RESEARCH-REGULAR
+    003201   RES-LR SCL-FY                             2       541   PROFESSIONAL RESEARCH-REGULAR
+    003202   RES (WOS)                                         541   PROFESSIONAL RESEARCH-REGULAR
+    003203   RES-LR SCL-AY                             1       541   PROFESSIONAL RESEARCH-REGULAR
+    003205   RES-LR SCL-AY-1/9                         1       541   PROFESSIONAL RESEARCH-REGULAR
+    003206   RES-SFT                                           541   PROFESSIONAL RESEARCH-REGULAR
+    003207   RES-FY-NON REP                          13A       541   PROFESSIONAL RESEARCH-REGULAR
+    003208   VIS RES                                 13A*      543   PROFESSIONAL RESEARCH-VISITING
+    003210   ASSOC RES-FY                            13B       541   PROFESSIONAL RESEARCH-REGULAR
+    003211   ASSOC RES-LR SCL-FY                       2       541   PROFESSIONAL RESEARCH-REGULAR
+    003212   ASSOC RES (WOS)                                   541   PROFESSIONAL RESEARCH-REGULAR
+    003213   ASSOC RES-LR SCL-AY                       1       541   PROFESSIONAL RESEARCH-REGULAR
+    003215   ASSOC RES-LR SCL-AY-1/9                   1       541   PROFESSIONAL RESEARCH-REGULAR
+    003216   ASSOC RES-SFT                                     541   PROFESSIONAL RESEARCH-REGULAR
+    003217   ASSOC RES-FY-NON REP                    13A       541   PROFESSIONAL RESEARCH-REGULAR
+    003218   VIS ASSOC RES                           13A*      543   PROFESSIONAL RESEARCH-VISITING
+    003220   ASST RES-FY                             13B       541   PROFESSIONAL RESEARCH-REGULAR
+    003221   ASST RES-LR SCL-FY                        2       541   PROFESSIONAL RESEARCH-REGULAR
+    003222   ASST RES (WOS)                                    541   PROFESSIONAL RESEARCH-REGULAR
+    003223   ASST RES-LR SCL-AY                        1       541   PROFESSIONAL RESEARCH-REGULAR
+    003225   ASST RES-LR SCL-AY-1/9                    1       541   PROFESSIONAL RESEARCH-REGULAR
+    003226   ASST RES-SFT                                      541   PROFESSIONAL RESEARCH-REGULAR
+    003227   ASST RES-FY-NON REP                     13A       541   PROFESSIONAL RESEARCH-REGULAR
+    003228   VIS ASST RES                            13A*      543   PROFESSIONAL RESEARCH-VISITING
+    003230   FLD PROG SUPV                                     927   MISCELLANEOUS TITLES-SERIES
+    003234   ASSOC FLD PROG SUPV                               927   MISCELLANEOUS TITLES-SERIES
+    003237   FACULTY FELLOW RES-AY                             577   POST-GRADUATE RESEARCH-NON-STUDENT
+    003238   FACULTY FELLOW RES-AY-1/9                         577   POST-GRADUATE RESEARCH-NON-STUDENT
+    003249   SENATE EMERITUS (WOS)                             316   ________-SENATE-EMERITUS
+
+
+
+UCOP Academic Personnel and Programs           Revised 7/1/2023                                     Page 8
+                                           UNIVERSITY OF CALIFORNIA
+                                               ACADEMIC TITLES
+                                        SORTED BY TITLE CODE/ JOB CODE
+                                                    2023-24
+Title/Job                                        Salary Scale
+Code         Title/Job Descr                        Table      CTO   CTO Name
+    003250   PROF IN RES-AY                            1       311   PROFESSOR IN RESIDENCE
+    003251   PROF IN RES-FY                            2       311   PROFESSOR IN RESIDENCE
+    003252   POSTDOC-EMPLOYEE                         23       575   POSTDOCTORAL SCHOLAR
+    003253   POSTDOC-FELLOW                           23       575   POSTDOCTORAL SCHOLAR
+    003254   POSTDOC-PAID DIRECT                      23       575   POSTDOCTORAL SCHOLAR
+    003255   POSTDOC-EMPLOYEE NEX                    23N       575   POSTDOCTORAL SCHOLAR
+    003256   INTRM POSTDOC SCHOLAR-EMPLOYEE           23       575   POSTDOCTORAL SCHOLAR
+    003258   ADJ PROF-AY                               1       335   ADJUNCT PROFESSOR
+    003259   ADJ PROF-FY                               2       335   ADJUNCT PROFESSOR
+    003260   ASSOC PROF IN RES-AY                      1       311   PROFESSOR IN RESIDENCE
+    003261   ASSOC PROF IN RES-FY                      2       311   PROFESSOR IN RESIDENCE
+    003262   GSR-TUIT & FEE REM-UCSD-GRP E            22       436   GRADUATE STUDENT RESEARCHER
+    003263   GSR-TUIT & FEE REM-UCSD-GRP F            22       436   GRADUATE STUDENT RESEARCHER
+    003264   GSR-TUIT & FEE REM-UCSD-GRP G            22       436   GRADUATE STUDENT RESEARCHER
+    003266   GSR-NO REM                               22       436   GRADUATE STUDENT RESEARCHER
+    003268   ASSOC ADJ PROF-AY                         1       335   ADJUNCT PROFESSOR
+    003269   ASSOC ADJ PROF-FY                         2       335   ADJUNCT PROFESSOR
+    003270   ASST PROF IN RES-AY                       1       311   PROFESSOR IN RESIDENCE
+    003271   ASST PROF IN RES-FY                       2       311   PROFESSOR IN RESIDENCE
+    003276   GSR-PARTIAL FEE REM                      22       436   GRADUATE STUDENT RESEARCHER
+    003278   ASST ADJ PROF-AY                          1       335   ADJUNCT PROFESSOR
+    003279   ASST ADJ PROF-FY                          2       335   ADJUNCT PROFESSOR
+    003282   GSR-FULL FEE REM                         22       436   GRADUATE STUDENT RESEARCHER
+    003283   GSR-FULL TUIT&PARTIAL FEE REM            22       436   GRADUATE STUDENT RESEARCHER
+    003284   GSR-TUIT & FEE REM                       22       436   GRADUATE STUDENT RESEARCHER
+    003285   GSR-TUIT & FEE REM-UCSD-GRP B            22       436   GRADUATE STUDENT RESEARCHER
+    003286   GSR-TUIT & FEE REM-UCSD-GRP C            22       436   GRADUATE STUDENT RESEARCHER
+    003287   GSR-TUIT & FEE REM-UCSD-GRP D            22       436   GRADUATE STUDENT RESEARCHER
+    003288   ADJ INSTR-AY                              1       335   ADJUNCT PROFESSOR
+    003289   ADJ INSTR-FY                              2       335   ADJUNCT PROFESSOR
+    003290   RES PROF-MILLER INST-AY                   1       566   OTHER RESEARCH
+    003291   RES PROF-MILLER INST-FY                   2       566   OTHER RESEARCH
+    003292   ASSOC RES PROF-MILLER INST-AY             1       566   OTHER RESEARCH
+    003293   ASSOC RES PROF-MILLER INST-FY             2       566   OTHER RESEARCH
+    003297   CHI GREEN SCHOLAR-UCSD                            566   OTHER RESEARCH
+    003300   SPECIALIST                              24B       551   SPECIALIST
+    003301   SPECIALIST NEX                         24B(N)     551   SPECIALIST
+    003302   SPECIALIST (WOS)                                  551   SPECIALIST
+    003303   SPECIALIST NON REP                      24A       551   SPECIALIST
+    003304   SPECIALIST NEX NON REP                 24A(N)     551   SPECIALIST
+    003305   VIS SPECIALIST                          24A*      553   SPECIALIST-VISITING
+    003306   VIS SPECIALIST NEX                    24A(N)*     553   SPECIALIST-VISITING
+    003310   ASSOC SPECIALIST                        24B       551   SPECIALIST
+    003311   ASSOC SPECIALIST NEX                   24B(N)     551   SPECIALIST
+    003312   ASSOC SPECIALIST (WOS)                            551   SPECIALIST
+    003313   ASSOC SPECIALIST NON REP                24A       551   SPECIALIST
+    003314   ASSOC SPECIALIST NEX NON REP           24A(N)     551   SPECIALIST
+    003315   VIS ASSOC SPECIALIST                    24A*      553   SPECIALIST-VISITING
+    003316   VIS ASSOC SPECIALIST NEX              24A(N)*     553   SPECIALIST-VISITING
+    003320   ASST SPECIALIST                         24B       551   SPECIALIST
+    003321   ASST SPECIALIST NEX                    24B(N)     551   SPECIALIST
+    003322   ASST SPECIALIST (WOS)                             551   SPECIALIST
+    003323   ASST SPECIALIST NON REP                 24A       551   SPECIALIST
+    003324   ASST SPECIALIST NEX NON REP            24A(N)     551   SPECIALIST
+    003325   VIS ASST SPECIALIST                     24A*      553   SPECIALIST-VISITING
+    003326   VIS ASST SPECIALIST NEX               24A(N)*     553   SPECIALIST-VISITING
+    003328   JR SPECIALIST (WOS)                               551   SPECIALIST
+    003329   JR SPECIALIST NEX                      24B(N)     551   SPECIALIST
+    003330   JR SPECIALIST                           24B       551   SPECIALIST
+    003333   JR SPECIALIST NON REP                   24A       551   SPECIALIST
+    003334   JR SPECIALIST NEX NON REP              24A(N)     551   SPECIALIST
+
+
+
+UCOP Academic Personnel and Programs           Revised 7/1/2023                                    Page 9
+                                              UNIVERSITY OF CALIFORNIA
+                                                  ACADEMIC TITLES
+                                           SORTED BY TITLE CODE/ JOB CODE
+                                                       2023-24
+Title/Job                                           Salary Scale
+Code         Title/Job Descr                           Table      CTO   CTO Name
+    003335   VIS JR SPECIALIST                          24A*      553   SPECIALIST-VISITING
+    003336   VIS JR SPECIALIST NEX                    24A(N)*     553   SPECIALIST-VISITING
+    003345   PROF IN RES-AY-1/10-B/E/E                    3       311   PROFESSOR IN RESIDENCE
+    003346   ASSOC PROF IN RES-AY-1/10-B/E/E              3       311   PROFESSOR IN RESIDENCE
+    003347   ASST PROF IN RES-AY-1/10-B/E/E               3       311   PROFESSOR IN RESIDENCE
+    003351   ASST PROF IN RES-AY-1/9                      1       311   PROFESSOR IN RESIDENCE
+    003352   ASSOC PROF IN RES-AY-1/9                     1       311   PROFESSOR IN RESIDENCE
+    003353   PROF IN RES-AY-1/9                           1       311   PROFESSOR IN RESIDENCE
+    003361   ASST ADJ PROF-AY-1/9                         1       335   ADJUNCT PROFESSOR
+    003362   ASSOC ADJ PROF-AY-1/9                        1       335   ADJUNCT PROFESSOR
+    003363   ADJ PROF-AY-1/9                              1       335   ADJUNCT PROFESSOR
+    003365   ASST ADJ PROF-AY-1/10                        1       335   ADJUNCT PROFESSOR
+    003366   ASSOC ADJ PROF-AY-1/10                       1       335   ADJUNCT PROFESSOR
+    003367   ADJ PROF-AY-1/10                             1       335   ADJUNCT PROFESSOR
+    003368   ASST ADJ PROF-AY-1/10-BEE                    3       335   ADJUNCT PROFESSOR
+    003369   ASSOC ADJ PROF-AY-1/10-BEE                   3       335   ADJUNCT PROFESSOR
+    003371   ASST ADJ PROF-AY-B/E/E                       3       335   ADJUNCT PROFESSOR
+    003372   ASST ADJ PROF-FY-B/E/E                       4       335   ADJUNCT PROFESSOR
+    003373   ASST ADJ PROF-AY-1/9-B/E/E                   3       335   ADJUNCT PROFESSOR
+    003374   ASSOC ADJ PROF-AY-B/E/E                      3       335   ADJUNCT PROFESSOR
+    003375   ASSOC ADJ PROF-FY-B/E/E                      4       335   ADJUNCT PROFESSOR
+    003376   ASSOC ADJ PROF-AY-1/9-B/E/E                  3       335   ADJUNCT PROFESSOR
+    003377   ADJ PROF-AY-B/E/E                            3       335   ADJUNCT PROFESSOR
+    003378   ADJ PROF-FY-B/E/E                            4       335   ADJUNCT PROFESSOR
+    003379   ADJ PROF-AY-1/9-B/E/E                        3       335   ADJUNCT PROFESSOR
+    003380   ADJ PROF-AY-1/10-BEE                         3       335   ADJUNCT PROFESSOR
+    003381   PROF IN RES-AY-B/E/E                         3       311   PROFESSOR IN RESIDENCE
+    003382   PROF IN RES-FY-B/E/E                         4       311   PROFESSOR IN RESIDENCE
+    003383   PROF IN RES-AY-1/9-B/E/E                     3       311   PROFESSOR IN RESIDENCE
+    003384   ASSOC PROF IN RES-AY-B/E/E                   3       311   PROFESSOR IN RESIDENCE
+    003385   ASSOC PROF IN RES-FY-B/E/E                   4       311   PROFESSOR IN RESIDENCE
+    003386   ASSOC PROF IN RES-AY-1/9-B/E/E               3       311   PROFESSOR IN RESIDENCE
+    003387   ASST PROF IN RES-AY-B/E/E                    3       311   PROFESSOR IN RESIDENCE
+    003388   ASST PROF IN RES-FY-B/E/E                    4       311   PROFESSOR IN RESIDENCE
+    003389   ASST PROF IN RES-AY-1/9-B/E/E                3       311   PROFESSOR IN RESIDENCE
+    003390   PROJ SCIENTIST-FY                          37B       581   PROJECT SERIES
+    003391   PROJ SCIENTIST-FY-B/E/E                    38B       581   PROJECT SERIES
+    003392   ASSOC PROJ SCIENTIST-FY                    37B       581   PROJECT SERIES
+    003393   ASSOC PROJ SCIENTIST-FY-B/E/E              38B       581   PROJECT SERIES
+    003394   ASST PROJ SCIENTIST-FY                     37B       581   PROJECT SERIES
+    003395   ASST PROJ SCIENTIST-FY-B/E/E               38B       581   PROJECT SERIES
+    003396   VIS PROJ SCIENTIST                         37A*      583   PROJECT SERIES-VISITING
+    003397   VIS ASSOC PROJ SCIENTIST                   37A*      583   PROJECT SERIES-VISITING
+    003398   VIS ASST PROJ SCIENTIST                    37A*      583   PROJECT SERIES-VISITING
+    003403   PROJ SCIENTIST-FY NON REP                  37A       581   PROJECT SERIES
+    003404   PROJ SCIENTIST-FY-B/E/E NONREP             38A       581   PROJECT SERIES
+    003405   ASSOC PROJ SCI-FY NON REP                  37A       581   PROJECT SERIES
+    003406   ASSOC PROJ SCI-FY-B/E/E NONREP             38A       581   PROJECT SERIES
+    003407   ASST PROJ SCIENTIST-FY NON REP             37A       581   PROJECT SERIES
+    003408   ASST PROJ SCI-FY-B/E/E NON REP             38A       581   PROJECT SERIES
+    003413   PROJ SCI-FY NEX NON REP                   37A(N)     581   PROJECT SERIES
+    003414   PROJ SCI-FY-B/E/E NEX NON REP             38A(N)     581   PROJECT SERIES
+    003415   ASSOC PROJ SCI-FY NEX NON REP             37A(N)     581   PROJECT SERIES
+    003416   ASSOC PROJSC-FY-BEE NEX NONREP            38A(N)     581   PROJECT SERIES
+    003417   ASST PROJ SCI-FY NEX NON REP              37A(N)     581   PROJECT SERIES
+    003418   ASST PROJSCI-FY-BEE NEX NONREP            38A(N)     581   PROJECT SERIES
+    003441   COOP EXT ADVISOR                            28       728   COOPERATIVE EXTENSION ADVISOR
+    003442   COOP EXT ADVISOR NEX                       28N       728   COOPERATIVE EXTENSION ADVISOR
+    003451   ASSOC COOP EXT ADVISOR                      28       728   COOPERATIVE EXTENSION ADVISOR
+    003452   ASSOC COOP EXT ADVISOR NEX                 28N       728   COOPERATIVE EXTENSION ADVISOR
+    003461   ASST COOP EXT ADVISOR                       28       728   COOPERATIVE EXTENSION ADVISOR
+
+
+
+UCOP Academic Personnel and Programs             Revised 7/1/2023                                       Page 10
+                                            UNIVERSITY OF CALIFORNIA
+                                                ACADEMIC TITLES
+                                         SORTED BY TITLE CODE/ JOB CODE
+                                                     2023-24
+Title/Job                                         Salary Scale
+Code         Title/Job Descr                         Table      CTO   CTO Name
+    003462   ASST COOP EXT ADVISOR NEX                28N       728   COOPERATIVE EXTENSION ADVISOR
+    003475   ASST SPECIALIST COOP EXT                  29       729   SPECIALIST IN COOPERATIVE EXTENSION
+    003476   ASST SPECIALIST COOP EXT NEX             29N       729   SPECIALIST IN COOPERATIVE EXTENSION
+    003477   ASSOC SPECIALIST COOP EXT                 29       729   SPECIALIST IN COOPERATIVE EXTENSION
+    003478   ASSOC SPECIALIST COOP EXT NEX            29N       729   SPECIALIST IN COOPERATIVE EXTENSION
+    003479   SPECIALIST COOP EXT                       29       729   SPECIALIST IN COOPERATIVE EXTENSION
+    003480   SPECIALIST COOP EXT NEX                  29N       729   SPECIALIST IN COOPERATIVE EXTENSION
+    003487   PROJ SCIENTIST (WOS)                               581   PROJECT SERIES
+    003488   ASSOC PROJ SCIENTIST (WOS)                         581   PROJECT SERIES
+    003489   ASST PROJ SCIENTIST (WOS)                          581   PROJECT SERIES
+    003490   PROJ SCIENTIST-FY NEX                   37B(N)     581   PROJECT SERIES
+    003491   PROJ SCIENTIST-FY-B/E/E NEX             38B(N)     581   PROJECT SERIES
+    003492   ASSOC PROJ SCIENTIST-FY NEX             37B(N)     581   PROJECT SERIES
+    003493   ASSOC PROJ SCNTST-FY-B/E/E NEX          38B(N)     581   PROJECT SERIES
+    003494   ASST PROJ SCIENTIST-FY NEX              37B(N)     581   PROJECT SERIES
+    003495   ASST PROJ SCNTST-FY-B/E/E NEX           38B(N)     581   PROJECT SERIES
+    003496   VIS PROJ SCIENTIST NEX                 37A(N)*     583   PROJECT SERIES-VISITING
+    003497   VIS ASSOC PROJ SCIENTIST NEX           37A(N)*     583   PROJECT SERIES-VISITING
+    003498   VIS ASST PROJ SCIENTIST NEX            37A(N)*     583   PROJECT SERIES-VISITING
+    003520   CONTINUING EDUCATOR I                     31       825   CONTINUING EDUCATOR -UNEX
+    003521   CONTINUING EDUCATOR II                    31       825   CONTINUING EDUCATOR -UNEX
+    003522   CONTINUING EDUCATOR III                   31       825   CONTINUING EDUCATOR -UNEX
+    003530   CONTINUING EDUCATOR I NEX                31N       825   CONTINUING EDUCATOR -UNEX
+    003531   CONTINUING EDUCATOR II NEX               31N       825   CONTINUING EDUCATOR -UNEX
+    003532   CONTINUING EDUCATOR III NEX              31N       825   CONTINUING EDUCATOR -UNEX
+    003539   PROGRAM COORDINATOR NEX                            828   UNIVERSITY EXTENSION-OTHER
+    003540   PROG COORD                                         828   UNIVERSITY EXTENSION-OTHER
+    003557   COORD PUB PROG NON REP                   30A       927   MISCELLANEOUS TITLES-SERIES
+    003558   COORD PUBLIC PROG                        30B       927   MISCELLANEOUS TITLES-SERIES
+    003559   ASSOC COORD PUB PROG NON REP             30A       927   MISCELLANEOUS TITLES-SERIES
+    003560   ASSOC COORD PUBLIC PROG                  30B       927   MISCELLANEOUS TITLES-SERIES
+    003561   ASST COORD PUB PROG NON REP              30A       927   MISCELLANEOUS TITLES-SERIES
+    003562   ASST COORD PUBLIC PROG                   30B       927   MISCELLANEOUS TITLES-SERIES
+    003570   TEACHER-UNEX-CONTRACT YR                           828   UNIVERSITY EXTENSION-OTHER
+    003572   ASST TEACHER-UNEX                                  828   UNIVERSITY EXTENSION-OTHER
+    003574   TEACHER-UNEX                                       828   UNIVERSITY EXTENSION-OTHER
+    003575   SPEAKER-UNEX                                       828   UNIVERSITY EXTENSION-OTHER
+    003580   COURSE AUTHOR-UNEX                                 828   UNIVERSITY EXTENSION-OTHER
+    003581   COURSE AUTHOR-UNEX NEX                             828   UNIVERSITY EXTENSION-OTHER
+    003600   ASSOC UNIV LIBRARIAN                      27       627   ASSOC & ASST UNIVERSITY LIBRARIAN
+    003601   ASSOC UNIV LIBRARIAN NEX                 27N       627   ASSOC & ASST UNIVERSITY LIBRARIAN
+    003602   LIBRARIAN-CAREER NON REP                 26A       621   LIBRARIAN
+    003603   LIBRARIAN-POTNTLCAREER NON REP           26A       621   LIBRARIAN
+    003604   ASSOC LIBRARIAN-CAREER NON REP           26A       621   LIBRARIAN
+    003605   ASSOC LIBRARIAN-POTLCAR NONREP           26A       621   LIBRARIAN
+    003606   ASST LIBRARIAN-CAREER NON REP            26A       621   LIBRARIAN
+    003607   ASST LIBRARIAN-POTLCAR NONREP            26A       621   LIBRARIAN
+    003610   ASST UNIV LIBRARIAN                       27       627   ASSOC & ASST UNIVERSITY LIBRARIAN
+    003611   ASST UNIV LIBRARIAN NEX                  27N       627   ASSOC & ASST UNIVERSITY LIBRARIAN
+    003612   LIBRARIAN-CAREER STATUS                  26B       621   LIBRARIAN
+    003613   LIBRARIAN-POTNTL CAREER STATUS           26B       621   LIBRARIAN
+    003614   LIBRARIAN-TEMP STATUS                    26B       621   LIBRARIAN
+    003615   VIS LIBRARIAN                            26A*      623   VISITING LIBRARIAN
+    003616   ASSOC LIBRARIAN -CAREER STATUS           26B       621   LIBRARIAN
+    003617   ASSOC LIBRARIAN-POTNTL CAREER            26B       621   LIBRARIAN
+    003618   ASSOC LIBRARIAN-TEMP STATUS              26B       621   LIBRARIAN
+    003620   ASST LIBRARIAN-CAREER STATUS             26B       621   LIBRARIAN
+    003621   ASST LIBRARIAN-POTNTL CAREER             26B       621   LIBRARIAN
+    003622   ASST LIBRARIAN-TEMP STATUS               26B       621   LIBRARIAN
+    003635   LAW LIBRARIAN                                      627   ASSOC & ASST UNIVERSITY LIBRARIAN
+    003636   LAW LIBRARIAN NEX                                  627   ASSOC & ASST UNIVERSITY LIBRARIAN
+
+
+
+UCOP Academic Personnel and Programs            Revised 7/1/2023                                       Page 11
+                                           UNIVERSITY OF CALIFORNIA
+                                               ACADEMIC TITLES
+                                        SORTED BY TITLE CODE/ JOB CODE
+                                                    2023-24
+Title/Job                                        Salary Scale
+Code         Title/Job Descr                        Table      CTO   CTO Name
+    003637   ASST LAW LIBRARIAN                                 627  ASSOC & ASST UNIVERSITY LIBRARIAN
+    003638   ASST LAW LIBRARIAN NEX                             627  ASSOC & ASST UNIVERSITY LIBRARIAN
+    003639   ASSOC LAW LIBRARIAN                                627  ASSOC & ASST UNIVERSITY LIBRARIAN
+    003640   ASSOC LAW LIBRARIAN NEX                            627  ASSOC & ASST UNIVERSITY LIBRARIAN
+    003650   CURATOR                                   1        927  MISCELLANEOUS TITLES-SERIES
+    003651   ASSOC CURATOR                             1        927  MISCELLANEOUS TITLES-SERIES
+    003652   ASST CURATOR                              1        927  MISCELLANEOUS TITLES-SERIES
+    003662   LIBRARIAN-CAREER STATUS NEX          26A/B(N)      621  LIBRARIAN
+    003663   LIBRARIAN-POTNTL CAREER NEX          26A/B(N)      621  LIBRARIAN
+    003664   LIBRARIAN-TEMP STATUS NEX            26A/B(N)      621  LIBRARIAN
+    003665   VIS LIBRARIAN NEX                     26A(N)*      623  VISITING LIBRARIAN
+    003666   ASSOC LIBRARIAN-CAREER NEX           26A/B(N)      621  LIBRARIAN
+    003667   ASSOC LIBRARIAN-POTNTL CAR NEX       26A/B(N)      621  LIBRARIAN
+    003668   ASSOC LIBRARIAN-TEMP NEX             26A/B(N)      621  LIBRARIAN
+    003670   ASST LIBRARIAN-CAREER NEX            26A/B(N)      621  LIBRARIAN
+    003671   ASST LIBRARIAN-POTNTL CAR NEX        26A/B(N)      621  LIBRARIAN
+    003672   ASST LIBRARIAN-TEMP STATUS NEX       26A/B(N)      621  LIBRARIAN
+    003700   FACULTY CONSULTANT                                 927  MISCELLANEOUS TITLES-SERIES
+    003800   NON-SENATE ACAD EMERITUS(WOS)                      928  MISCELLANEOUS TITLES-SINGLE TITLES
+    003802   RECALL NON-FACULTY ACAD                            928  MISCELLANEOUS TITLES-SINGLE TITLES
+    003812   RECALL NON-FACULTY ACAD NEX                        928  MISCELLANEOUS TITLES-SINGLE TITLES
+    003900   FACULTY ADMIN TRANSITION LV-AY                     928  MISCELLANEOUS TITLES-SINGLE TITLES
+    003910   FACULTY ADMIN TRANSITION LV-FY                     928  MISCELLANEOUS TITLES-SINGLE TITLES
+    003990   ADDL COMP-HGH&OLIVE VIEW MCS                       999  SUPPLEMENTAL PAY CODES
+    003993   FACULTY RECRUITMENT ALLOW                40        999  SUPPLEMENTAL PAY CODES
+    003995   EAP-TEMP FACULTY HOUSING ALLOW                     999  SUPPLEMENTAL PAY CODES
+    003998   SALARY SUPPLEMENTATION                             999  SUPPLEMENTAL PAY CODES
+    003999   MISCELLANEOUS                                      928  MISCELLANEOUS TITLES-SINGLE TITLES
+  CWR003     VISITING STUDENT RES-GRADUATE                     CWR CONTINGENT WORKER
+  CWR007     CLIN ASSOC/ADMITTING PHYSICIAN                    CWR CONTINGENT WORKER
+  CWR015     VISITING SCHOLAR                                  CWR CONTINGENT WORKER
+  CWR016     VISITING STUDENT RES-UNDERGRAD                    CWR CONTINGENT WORKER
+  CWR021     RESEARCH FELLOW                                   CWR CONTINGENT WORKER
+  CWR022     RESEARCH ASSOCIATE                                CWR CONTINGENT WORKER
+
+  Notes:
+  NEX = Nonexempt. Please contact local Academic Personnel Office regarding use of Nonexempt titles.
+  Salary scale tables for Nonexempt titles are indicated with an "N".
+  * Salary Scale for guidance only.
+  ** Contact local Academic Personnel Office regarding use of this title and salary rates.
+
+
+
+
+UCOP Academic Personnel and Programs                     Revised 7/1/2023                              Page 12
+
