@@ -66,6 +66,11 @@ def acquire_data(year: int) -> dict:
 
         curr_response_data = json.loads(response.text.replace("\'", "\"").encode('utf-8'),
                       strict=False)
+
+        # The server returned a response, but the response didn't contain any results -- must've happened because
+        # the pagination had reached the end.
+        if len(curr_response_data["rows"]) == 0:
+            break
         
         response_data.append(curr_response_data)
 
@@ -79,6 +84,7 @@ def acquire_data(year: int) -> dict:
             json.dump(curr_response_data, response_file, indent=4)
 
         page_idx += 1
+        # Sleep to avoid overloading server and getting throttled
         time.sleep(ONE_MINUTE_TO_SECONDS / random.randint(2, 6))
 
     print(f"[DEBUG] Finished querying '{page_idx}' pages worth of UCOP data for year '{year}'")
