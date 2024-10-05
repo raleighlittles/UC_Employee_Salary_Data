@@ -17,19 +17,20 @@ def create_database_from_csv(csv_dir_name: str):
     combined_dataframe = pandas.DataFrame()
 
     # needed for logging later
-    locale.setlocale(locale.LC_ALL, 'en_US')
+    locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
 
-    for file in os.listdir(csv_dir):
-        filename = os.fsdecode(file)
+    for csv_file in os.listdir(csv_dir):
+
+        csv_filename = os.fsdecode(csv_file)
 
         # the "1" at the end is to remove the period ('.') from the extension
-        file_extension = os.path.splitext(filename)[-1][1:]
+        file_extension = os.path.splitext(csv_filename)[-1][1:]
 
         if file_extension.lower() == "csv":
 
             # pdb.set_trace()
 
-            print(f"[DEBUG] Encountered CSV file '{filename}'..")
+            print(f"[DEBUG] Encountered CSV file '{csv_filename}'..")
 
             # The CSV parsing is a little bit ugly; there's 2 main cases that cause issues:
             # (1) A comma inside of a quoted string -- for example if a user's last name has a suffix
@@ -39,7 +40,7 @@ def create_database_from_csv(csv_dir_name: str):
             # but this causes issues in cases where an apostrophe appears in a person's last name, e.g. 'O'BRIEN'. To truly get around this we have to tell pandas to ignored escaped apostrophes
             try:
                 curr_csv = pandas.read_csv(filepath_or_buffer=os.path.join(
-                    csv_dir_name, filename), sep=",", quotechar="'", escapechar="\\")
+                    csv_dir_name, csv_filename), sep=",", quotechar="'", escapechar="\\")
 
             except pandas.errors.ParserError as exc_1:
                 print(f"[ERROR] Couldn't parse CSV file: '{exc_1}'")
@@ -47,7 +48,7 @@ def create_database_from_csv(csv_dir_name: str):
 
                 try:
                     curr_csv = pandas.read_csv(filepath_or_buffer=os.path.join(
-                        csv_dir_name, filename), sep=",", quotechar='"')
+                        csv_dir_name, csv_filename), sep=",", quotechar='"')
 
                 except pandas.errors.ParserError as exc_2:
                     print(
@@ -61,7 +62,7 @@ def create_database_from_csv(csv_dir_name: str):
 
         else:
             print(
-                f"[WARN] Skipping '{filename}' as it is not a valid CSV file")
+                f"[WARN] Skipping '{csv_filename}' as it is not a valid CSV file")
 
     db_engine = sqlalchemy.create_engine(
         f"sqlite:///uc_employee_salaries.sqlite")
