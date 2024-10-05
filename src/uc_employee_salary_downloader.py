@@ -17,7 +17,7 @@ def acquire_data(year: int) -> dict:
     base_url: str = "https://ucannualwage.ucop.edu"
     search_url: str = base_url + "/wage/search.do"
 
-    # Request headers copied of out Chrome's devtools.
+    # Request headers copied out of Chrome's devtools.
     request_headers = {
         "Content-Length": '255',
         "Origin": base_url,
@@ -26,27 +26,29 @@ def acquire_data(year: int) -> dict:
         "Content-Type": "application/x-www-form-urlencoded",
         "Accept": "application/json, text/javascript, */*; q=0.01",
         "X-Requested-With": "XMLHttpRequest",
-        "Referer": base_url + "/wage/",
+        "Referrer": base_url + "/wage/",
         "Accept-Encoding": "gzip, deflate, br",
         "Accept-Language": "en-US, en; q=0.8;q=0.6",
         "Cookie": "JSESSIONID=3BB001A8BF120628A6F641D288077941; AWSALB=GvmQ6hPGjEHx/PVbH1sxDajfAd+y+7trNGbNantJEfsd9NGs7SiaqZTDL8KrXqDIqlujscbyzbHVsEZZBPaKk7/DRWmAR7HxDlcqNqWPe6xjCxNq/GReVErKeQ7A; AWSALBCORS=GvmQ6hPGjEHx/PVbH1sxDajfAd+y+7trNGbNantJEfsd9NGs7SiaqZTDL8KrXqDIqlujscbyzbHVsEZZBPaKk7/DRWmAR7HxDlcqNqWPe6xjCxNq/GReVErKeQ7A"
     }
 
-    response_data = list()
+    response_data_all_pages = list()
 
     # Have to paginate results
     page_idx = 1
+    num_results_per_page = 10000
 
     while True:
 
         # Dummy request payload. Searches over all locations to search for any employee receiving between 1 and
         # 1 billion dollars in salary (aka, everyone).
-        payload = "_search=false&nd=1724651055477&rows=" + "10000" + f"&page={page_idx}&sidx=EAW_LST_NAM&sord=asc&year=" + str(
+        payload = "_search=false&nd=1724651055477&rows=" + f"{num_results_per_page}" + f"&page={page_idx}&sidx=EAW_LST_NAM&sord=asc&year=" + str(
             year
         ) + "&location=ALL&firstname=&lastname=&title=&startSal=1&endSal=1000000000"
 
         session = requests.Session()
-        response = session.post(search_url, headers=request_headers, data=payload, timeout=20)
+        response = session.post(
+            search_url, headers=request_headers, data=payload, timeout=20)
 
         try:
             response.raise_for_status()
@@ -65,31 +67,38 @@ def acquire_data(year: int) -> dict:
         # 'If strict is false...'
 
         curr_response_data = json.loads(response.text.replace("\'", "\"").encode('utf-8'),
-                      strict=False)
+                                        strict=False)
 
         # The server returned a response, but the response didn't contain any results -- must've happened because
         # the pagination had reached the end.
         if len(curr_response_data["rows"]) == 0:
             break
-        
-        response_data.append(curr_response_data)
+
+        response_data_all_pages.append(curr_response_data)
 
         # print(f"[DEBUG] Queried page {page_idx}..")
-        with open("progress.txt", mode="w") as progress_file: # overwrite mode, not append
+        with open("progress.txt", mode="w") as progress_file:  # overwrite mode, not append
             progress_file.write(f"Queried page {page_idx}..")
 
-        output_filename = os.path.join("output", f"response_data_{page_idx}.json")
+        # Log the server's JSON responses for each page, to a directory - in case there's an issue with the server timing out,
+        # you can start from that page index next time rather than starting all over again
+        server_responses_dir = "output"
+        os.mkdir(server_responses_dir)
 
-        with open(output_filename, mode="w") as response_file:
+        server_resp_filename = os.path.join(
+            server_responses_dir, f"response_data_{page_idx}.json")
+
+        with open(server_resp_filename, mode="w", encoding="utf-8") as response_file:
             json.dump(curr_response_data, response_file, indent=4)
 
         page_idx += 1
         # Sleep to avoid overloading server and getting throttled
         time.sleep(ONE_MINUTE_TO_SECONDS / random.randint(2, 6))
 
-    print(f"[DEBUG] Finished querying '{page_idx}' pages worth of UCOP data for year '{year}'")
+    print(f"[DEBUG] Finished querying '{
+          page_idx}' pages worth of UCOP data for year '{year}'")
 
-    return response_data
+    return response_data_all_pages
 
 
 def parse_salary_data_to_csv(response_data_list, year: int) -> None:
@@ -124,7 +133,8 @@ def parse_salary_data_to_csv(response_data_list, year: int) -> None:
 
                 csv_writer.writerow(employee_data)
 
-    print(f"[DEBUG]: Finished writing '{total_num_records}' records to file '{output_csv_filename}', size='{os.path.getsize(output_csv_filename)}' bytes")
+    print(f"[DEBUG]: Finished writing '{total_num_records}' records to file '{
+          output_csv_filename}', size='{os.path.getsize(output_csv_filename)}' bytes")
 
 
 if __name__ == "__main__":
