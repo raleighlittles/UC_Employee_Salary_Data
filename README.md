@@ -2,12 +2,11 @@
 
 I scraped the [University of California's Employee Pay website](https://ucannualwage.ucop.edu/wage/) that provides details on every UC employee and their wages for a given year*.
 
-Data is available for the years 2010 through 2022.
-
+Data is available for the years **2010* through *2023*. I do a annual Github release that contains a SQL database that combines all salary data for known years, including that previous year, e.g. 2023's release contains 2010 - 2022 data.
 
 # Scraper
 
-The aforementioned UCOP website lets you view or search specific records, but it doesn't have a way to export records at all. 
+The aforementioned UCOP website lets you view or search specific records, but it doesn't have a way to export records at all.
 
 I wrote a Python script that essentially queries the entire database and then saves it to a [CSV file](https://en.wikipedia.org/wiki/Comma-separated_values).
 
@@ -23,9 +22,9 @@ options:
 
 Example: if you run
 
-`$ python3 uc_employee_salary_downloader.py -y <YEAR>`
+`$ python3 uc_employee_salary_downloader.py -y 2022`
 
-you'll get a file named "UCOP_Data.csv" in the current directory containing all salary information for that year.
+you'll get a file named "UCOP_Data_2022.csv" in the current directory containing all salary information for that year.
 
 Here's what that CSV file looks like:
 
@@ -58,7 +57,7 @@ The UCOP assigned job titles for student types are odd. See `docs` for a list of
 
 > Q3: Why are some of the first and last name fields missing ("*****") ?
 
-Due to [FERPA](https://en.wikipedia.org/wiki/Family_Educational_Rights_and_Privacy_Act) restrictions, the names of students (this includes both undergraduates and graduates!) names are censored. In the example CSV I listed you'll see that the titles are all student related.
+Due to [FERPA](https://en.wikipedia.org/wiki/Family_Educational_Rights_and_Privacy_Act) restrictions, the names of students (this includes both undergraduates and graduates!) names are censored, replaced with 5 asterisks instead. In the example CSV I listed you'll see that the titles are all student related.
 
 
 # Future/Roadmap
