@@ -5,6 +5,14 @@ import requests
 import time
 import os
 import random
+import sys
+
+import logging
+
+# Can't use requests library with HTTP 2.0 yet as required by the UCOP server
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(filename='ucop.log', encoding='utf-8', level=logging.DEBUG)
 
 ONE_MINUTE_TO_SECONDS = 60
 
@@ -15,21 +23,29 @@ def acquire_data(year: int) -> dict:
     :return:
     """
     base_url: str = "https://ucannualwage.ucop.edu"
-    search_url: str = base_url + "/wage/search.do"
+    search_url: str = base_url + "/wage/search"
 
     # Request headers copied out of Chrome's devtools.
     request_headers = {
-        "Content-Length": '255',
-        "Origin": base_url,
-        "User-Agent":
-        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0",
-        "Content-Type": "application/x-www-form-urlencoded",
+        "Host": "ucannualwage.ucop.edu",
+        "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:143.0) Gecko/20100101 Firefox/143.0",
         "Accept": "application/json, text/javascript, */*; q=0.01",
+        "Accept-Language": "en-US,en;q=0.5",
+        "Accept-Encoding": "gzip, deflate, br, zstd",
+        "Referer": "https://ucannualwage.ucop.edu/wage/",
+        "Content-Type": "application/json",
         "X-Requested-With": "XMLHttpRequest",
-        "Referrer": base_url + "/wage/",
-        "Accept-Encoding": "gzip, deflate, br",
-        "Accept-Language": "en-US, en; q=0.8;q=0.6",
-        "Cookie": "JSESSIONID=3BB001A8BF120628A6F641D288077941; AWSALB=GvmQ6hPGjEHx/PVbH1sxDajfAd+y+7trNGbNantJEfsd9NGs7SiaqZTDL8KrXqDIqlujscbyzbHVsEZZBPaKk7/DRWmAR7HxDlcqNqWPe6xjCxNq/GReVErKeQ7A; AWSALBCORS=GvmQ6hPGjEHx/PVbH1sxDajfAd+y+7trNGbNantJEfsd9NGs7SiaqZTDL8KrXqDIqlujscbyzbHVsEZZBPaKk7/DRWmAR7HxDlcqNqWPe6xjCxNq/GReVErKeQ7A"
+        "Content-Length": "180",
+        "Origin": "https://ucannualwage.ucop.edu",
+        "Connection": "keep-alive",
+        "Cookie": "JSESSIONID=7432E58D426F2B1E1170E08FA11312A1; AWSALB=5OEZRpd1N+jIHcgFgfya2eiJHVGQyl9vSHr8s/0Ynq7oyh3qggSHTy4n4FovTTuA97J3yNVoWQHmqCqYX61xzvn9rtsftyjAHUDtqqTh3mRjwyhW1V4drtHeM5NZ; AWSALBCORS=5OEZRpd1N+jIHcgFgfya2eiJHVGQyl9vSHr8s/0Ynq7oyh3qggSHTy4n4FovTTuA97J3yNVoWQHmqCqYX61xzvn9rtsftyjAHUDtqqTh3mRjwyhW1V4drtHeM5NZ",
+        "Sec-Fetch-Dest": "empty",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "same-origin",
+        "Priority": "u=0",
+        "Pragma": "no-cache",
+        "Cache-Control": "no-cache",
+        "TE": "trailers"
     }
 
     response_data_all_pages = list()
@@ -42,20 +58,19 @@ def acquire_data(year: int) -> dict:
 
         # Dummy request payload. Searches over all locations to search for any employee receiving between 1 and
         # 1 billion dollars in salary (aka, everyone).
-        payload = "_search=false&nd=1724651055477&rows=" + f"{num_results_per_page}" + f"&page={page_idx}&sidx=EAW_LST_NAM&sord=asc&year=" + str(
-            year
-        ) + "&location=ALL&firstname=&lastname=&title=&startSal=1&endSal=1000000000"
+        payload= {"op":"search","page":1,"rows":20,"sidx":"lastname","sord":"asc","count":0,"year":"2024","firstname":"","location":"ALL","lastname":"","title":"","startSal":"1","endSal":"1000000"}
 
         session = requests.Session()
         response = session.post(
-            search_url, headers=request_headers, data=payload, timeout=20)
+            search_url, headers=request_headers, data=payload, timeout=60)
 
         try:
             response.raise_for_status()
 
         except requests.HTTPError as err:
             print("ERROR: ", err)
-            break
+            import pdb; pdb.set_trace()
+            sys.exit(2)
 
         # Despite the response type being "text/json", calling `response.json()` fails immediately with the following error message:
         # json.errors.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 1 (char 2)
