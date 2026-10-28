@@ -1,167 +1,141 @@
 import argparse
 import csv
 import json
-import requests
-import time
+import logging
 import os
 import random
 import sys
+import time
 
-import logging
-
-# Can't use requests library with HTTP 2.0 yet as required by the UCOP server
+import requests
 
 logger = logging.getLogger(__name__)
-logging.basicConfig(filename='ucop.log', encoding='utf-8', level=logging.DEBUG)
+logging.basicConfig(filename="ucop.log", encoding="utf-8", level=logging.DEBUG)
 
-ONE_MINUTE_TO_SECONDS = 60
+BASE_URL = "https://ucannualwage.ucop.edu"
+SEARCH_URL = BASE_URL + "/wage/search"
+ROWS_PER_PAGE = 10000
+OUTPUT_DIR = "output"
 
-def acquire_data(year: int) -> dict:
-    """
-    Issues a POST request to the UC annual website to retrieve all possible employee financial data.
 
-    :return:
-    """
-    base_url: str = "https://ucannualwage.ucop.edu"
-    search_url: str = base_url + "/wage/search"
-
-    # Request headers copied out of Chrome's devtools.
-    request_headers = {
-        "Host": "ucannualwage.ucop.edu",
+def build_session() -> requests.Session:
+    """Create a session with browser-like headers and fresh cookies."""
+    session = requests.Session()
+    session.headers.update({
         "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:143.0) Gecko/20100101 Firefox/143.0",
         "Accept": "application/json, text/javascript, */*; q=0.01",
         "Accept-Language": "en-US,en;q=0.5",
-        "Accept-Encoding": "gzip, deflate, br, zstd",
-        "Referer": "https://ucannualwage.ucop.edu/wage/",
-        "Content-Type": "application/json",
+        "Referer": BASE_URL + "/wage/",
+        "Origin": BASE_URL,
         "X-Requested-With": "XMLHttpRequest",
-        "Content-Length": "180",
-        "Origin": "https://ucannualwage.ucop.edu",
-        "Connection": "keep-alive",
-        "Cookie": "JSESSIONID=7432E58D426F2B1E1170E08FA11312A1; AWSALB=5OEZRpd1N+jIHcgFgfya2eiJHVGQyl9vSHr8s/0Ynq7oyh3qggSHTy4n4FovTTuA97J3yNVoWQHmqCqYX61xzvn9rtsftyjAHUDtqqTh3mRjwyhW1V4drtHeM5NZ; AWSALBCORS=5OEZRpd1N+jIHcgFgfya2eiJHVGQyl9vSHr8s/0Ynq7oyh3qggSHTy4n4FovTTuA97J3yNVoWQHmqCqYX61xzvn9rtsftyjAHUDtqqTh3mRjwyhW1V4drtHeM5NZ",
-        "Sec-Fetch-Dest": "empty",
-        "Sec-Fetch-Mode": "cors",
-        "Sec-Fetch-Site": "same-origin",
-        "Priority": "u=0",
-        "Pragma": "no-cache",
-        "Cache-Control": "no-cache",
-        "TE": "trailers"
-    }
+    })
+    # Visit the landing page first so the server issues fresh JSESSIONID / AWSALB cookies.
+    resp = session.get(BASE_URL + "/wage/", timeout=60)
+    resp.raise_for_status()
+    logger.debug("Initial cookies: %s", session.cookies.get_dict())
+    return session
 
-    response_data_all_pages = list()
 
-    # Have to paginate results
+def parse_response(response: requests.Response) -> dict:
+    """Parse the server's JSON, falling back to the old single-quote hack if needed."""
+    try:
+        # strict=False tolerates the stray control character the server sometimes emits.
+        return json.loads(response.text, strict=False)
+    except json.JSONDecodeError:
+        return json.loads(response.text.replace("'", '"'), strict=False)
+
+
+def acquire_data(year: int) -> list:
+    """Query every page of results for the given year."""
+    session = build_session()
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+    all_pages = []
     page_idx = 1
-    num_results_per_page = 10000
 
     while True:
+        # Searches all locations for anyone earning between $1 and $1 billion (i.e. everyone).
+        payload = {
+            "op": "search",
+            "page": page_idx,
+            "rows": ROWS_PER_PAGE,
+            "sidx": "lastname",
+            "sord": "asc",
+            "count": 0,
+            "year": str(year),
+            "firstname": "",
+            "location": "ALL",
+            "lastname": "",
+            "title": "",
+            "startSal": "1",
+            "endSal": "1000000000",
+        }
 
-        # Dummy request payload. Searches over all locations to search for any employee receiving between 1 and
-        # 1 billion dollars in salary (aka, everyone).
-        payload= {"op":"search","page":1,"rows":20,"sidx":"lastname","sord":"asc","count":0,"year":"2024","firstname":"","location":"ALL","lastname":"","title":"","startSal":"1","endSal":"1000000"}
+        # json= serializes the body and sets Content-Type/Content-Length correctly.
+        response = session.post(SEARCH_URL, json=payload, timeout=120)
 
-        session = requests.Session()
-        response = session.post(
-            search_url, headers=request_headers, data=payload, timeout=60)
-
-        try:
-            response.raise_for_status()
-
-        except requests.HTTPError as err:
-            print("ERROR: ", err)
-            import pdb; pdb.set_trace()
+        if not response.ok:
+            print(f"ERROR: HTTP {response.status_code} {response.reason}")
+            print("Response headers:", dict(response.headers))
+            print("Response body (first 1000 chars):", response.text[:1000])
             sys.exit(2)
 
-        # Despite the response type being "text/json", calling `response.json()` fails immediately with the following error message:
-        # json.errors.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 1 (char 2)
-        # Thus, we convert the response.text object to have double quotes instead of single quotes.
-        # Additionally, there is an errant control character somehow embedded in response.text, which gives the error:
-        # json.decoder.JSONDecodeError: Invalid control character at: line 185849 column 69 (char 22761096)
-        # To override this, we must set the 'strict' property to false.
-        # See: https://docs.python.org/3/library/json.html#json.JSONDecoder
-        # 'If strict is false...'
+        data = parse_response(response)
 
-        curr_response_data = json.loads(response.text.replace("\'", "\"").encode('utf-8'),
-                                        strict=False)
-
-        # The server returned a response, but the response didn't contain any results -- must've happened because
-        # the pagination had reached the end.
-        if len(curr_response_data["rows"]) == 0:
+        if len(data["rows"]) == 0:
             break
 
-        response_data_all_pages.append(curr_response_data)
+        all_pages.append(data)
 
-        # print(f"[DEBUG] Queried page {page_idx}..")
-        with open("progress.txt", mode="w") as progress_file:  # overwrite mode, not append
+        with open("progress.txt", mode="w") as progress_file:
             progress_file.write(f"Queried page {page_idx}..")
 
-        # Log the server's JSON responses for each page, to a directory - in case there's an issue with the server timing out,
-        # you can start from that page index next time rather than starting all over again
-        server_responses_dir = "output"
-        os.mkdir(server_responses_dir)
+        # Save each page so a failure doesn't mean starting over.
+        path = os.path.join(OUTPUT_DIR, f"response_data_{page_idx}.json")
+        with open(path, mode="w", encoding="utf-8") as f:
+            json.dump(data, f, indent=4)
 
-        server_resp_filename = os.path.join(
-            server_responses_dir, f"response_data_{page_idx}.json")
-
-        with open(server_resp_filename, mode="w", encoding="utf-8") as response_file:
-            json.dump(curr_response_data, response_file, indent=4)
+        # Stop if the server reports this was the last page.
+        total_pages = data.get("total")
+        if total_pages is not None and page_idx >= int(total_pages):
+            break
 
         page_idx += 1
-        # Sleep to avoid overloading server and getting throttled
-        time.sleep(ONE_MINUTE_TO_SECONDS / random.randint(2, 6))
+        time.sleep(60 / random.randint(2, 6))
 
-    print(f"[DEBUG] Finished querying '{
-          page_idx}' pages worth of UCOP data for year '{year}'")
-
-    return response_data_all_pages
+    print(f"[DEBUG] Finished querying {page_idx} pages of UCOP data for year {year}")
+    return all_pages
 
 
 def parse_salary_data_to_csv(response_data_list, year: int) -> None:
-    """
-
-    """
-    # These come from website's form
     column_names = [
         "id", "year", "location", "first name", "last name", "title",
-        "gross pay", "regular pay", "overtime pay", "other pay"
+        "gross pay", "regular pay", "overtime pay", "other pay",
     ]
 
     output_csv_filename = f"UCOP_Data_{year}.csv"
     total_num_records = 0
 
-    with open(file=output_csv_filename, mode="w", encoding="utf-8") as csv_file_object:
-
-        csv_writer = csv.writer(csv_file_object, delimiter=",")
+    with open(output_csv_filename, mode="w", encoding="utf-8", newline="") as csv_file:
+        csv_writer = csv.writer(csv_file, delimiter=",")
         csv_writer.writerow(column_names)
 
-        for response_data_idx, response_data in enumerate(response_data_list):
-
-            number_of_requests_to_search_over = response_data["records"]
-            data_records: list = response_data["rows"]
-            total_num_records += len(data_records)
-
-            for employee_record in data_records:
-
-                employee_data: list = employee_record["cell"]
-
-                assert (len(employee_data) == len(column_names))
-
+        for response_data in response_data_list:
+            for employee_record in response_data["rows"]:
+                employee_data = employee_record["cell"]
+                assert len(employee_data) == len(column_names), employee_data
                 csv_writer.writerow(employee_data)
+                total_num_records += 1
 
-    print(f"[DEBUG]: Finished writing '{total_num_records}' records to file '{
-          output_csv_filename}', size='{os.path.getsize(output_csv_filename)}' bytes")
+    size = os.path.getsize(output_csv_filename)
+    print(f"[DEBUG] Wrote {total_num_records} records to '{output_csv_filename}', size={size} bytes")
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-y", "--year", type=int, required=True,
+                        help="The year you wish to download salary data for.")
+    args = parser.parse_args()
 
-    argparse_parser = argparse.ArgumentParser()
-
-    argparse_parser.add_argument(
-        "-y", "--year", type=int, help="The year you wish to download salary data for.", required=True)
-
-    argparse_args = argparse_parser.parse_args()
-
-    queried_salary_data = acquire_data(argparse_args.year)
-    print(f"[DEBUG] Finished querying data for '{argparse_args.year}'")
-
-    parse_salary_data_to_csv(queried_salary_data, argparse_args.year)
+    queried_salary_data = acquire_data(args.year)
+    parse_salary_data_to_csv(queried_salary_data, args.year)
