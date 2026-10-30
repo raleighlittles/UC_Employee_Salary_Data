@@ -14,12 +14,25 @@ logging.basicConfig(filename="ucop.log", encoding="utf-8", level=logging.DEBUG)
 
 BASE_URL = "https://ucannualwage.ucop.edu"
 SEARCH_URL = BASE_URL + "/wage/search"
-ROWS_PER_PAGE = 10000
-OUTPUT_DIR = "output"
+
+# Keys as returned by the server, and the CSV headers they map to (same order).
+FIELDS = ["id", "year", "location", "firstname", "lastname", "title",
+          "grosspay", "basepay", "overtimepay", "adjustpay"]
+COLUMN_NAMES = ["id", "year", "location", "first name", "last name", "title",
+                "gross pay", "regular pay", "overtime pay", "other pay"]
+
+MAX_RETRIES = 3
 
 
-def build_session() -> requests.Session:
-    """Create a session with browser-like headers and fresh cookies."""
+def refresh_session(session: requests.Session) -> None:
+    """Drop old cookies and visit the landing page to get fresh ones."""
+    session.cookies.clear()
+    resp = session.get(BASE_URL + "/wage/", timeout=60)
+    resp.raise_for_status()
+    logger.debug("Fresh cookies: %s", session.cookies.get_dict())
+
+
+def make_session() -> requests.Session:
     session = requests.Session()
     session.headers.update({
         "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:143.0) Gecko/20100101 Firefox/143.0",
@@ -29,15 +42,11 @@ def build_session() -> requests.Session:
         "Origin": BASE_URL,
         "X-Requested-With": "XMLHttpRequest",
     })
-    # Visit the landing page first so the server issues fresh JSESSIONID / AWSALB cookies.
-    resp = session.get(BASE_URL + "/wage/", timeout=60)
-    resp.raise_for_status()
-    logger.debug("Initial cookies: %s", session.cookies.get_dict())
+    refresh_session(session)
     return session
 
 
 def parse_response(response: requests.Response) -> dict:
-    """Parse the server's JSON, falling back to the old single-quote hack if needed."""
     try:
         # strict=False tolerates the stray control character the server sometimes emits.
         return json.loads(response.text, strict=False)
@@ -45,97 +54,116 @@ def parse_response(response: requests.Response) -> dict:
         return json.loads(response.text.replace("'", '"'), strict=False)
 
 
-def acquire_data(year: int) -> list:
-    """Query every page of results for the given year."""
-    session = build_session()
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
+def fetch_page(session: requests.Session, year: int, page: int, page_size: int) -> dict:
+    payload = {
+        "op": "search",
+        "page": page,
+        "rows": page_size,        # old parameter name
+        "pageSize": page_size,    # name the server now echoes back
+        "sidx": "lastname",
+        "sord": "asc",
+        "count": 0,
+        "year": str(year),
+        "firstname": "",
+        "location": "ALL",
+        "lastname": "",
+        "title": "",
+        "startSal": "1",
+        "endSal": "1000000000",
+    }
 
-    all_pages = []
-    page_idx = 1
-
-    while True:
-        # Searches all locations for anyone earning between $1 and $1 billion (i.e. everyone).
-        payload = {
-            "op": "search",
-            "page": page_idx,
-            "rows": ROWS_PER_PAGE,
-            "sidx": "lastname",
-            "sord": "asc",
-            "count": 0,
-            "year": str(year),
-            "firstname": "",
-            "location": "ALL",
-            "lastname": "",
-            "title": "",
-            "startSal": "1",
-            "endSal": "1000000000",
-        }
-
-        # json= serializes the body and sets Content-Type/Content-Length correctly.
+    for attempt in range(1, MAX_RETRIES + 1):
         response = session.post(SEARCH_URL, json=payload, timeout=120)
 
         if not response.ok:
-            print(f"ERROR: HTTP {response.status_code} {response.reason}")
-            print("Response headers:", dict(response.headers))
+            print(f"ERROR: HTTP {response.status_code} {response.reason} on page {page}")
             print("Response body (first 1000 chars):", response.text[:1000])
             sys.exit(2)
 
         data = parse_response(response)
+        if data.get("rows"):
+            return data
 
-        if len(data["rows"]) == 0:
-            break
+        print(f"WARNING: page {page} came back empty (attempt {attempt}/{MAX_RETRIES}); "
+              "refreshing session and retrying...")
+        time.sleep(10 * attempt)
+        refresh_session(session)
+
+    print(f"ERROR: page {page} still empty after {MAX_RETRIES} attempts. "
+          "Rerun the script to resume from saved pages.")
+    sys.exit(3)
+
+
+def acquire_data(year: int, page_size: int) -> list:
+    out_dir = f"output_{year}_ps{page_size}"
+    os.makedirs(out_dir, exist_ok=True)
+
+    session = make_session()
+    all_pages = []
+    page_idx = 1
+    total_pages = None
+
+    while total_pages is None or page_idx <= total_pages:
+        path = os.path.join(out_dir, f"response_data_{page_idx}.json")
+
+        if os.path.exists(path):  # resume: reuse a page saved by an earlier run
+            with open(path, encoding="utf-8") as f:
+                data = json.load(f)
+        else:
+            data = fetch_page(session, year, page_idx, page_size)
+            with open(path, mode="w", encoding="utf-8") as f:
+                json.dump(data, f)
+            time.sleep(random.uniform(2, 5))  # be polite to the server
+
+        if total_pages is None:
+            total_pages = int(data["total"])
+            print(f"Server reports {data['records']} records over {total_pages} pages "
+                  f"(pageSize={data.get('pageSize')})")
+            if data.get("pageSize") != page_size:
+                print(f"WARNING: requested {page_size} rows/page but server used "
+                      f"{data.get('pageSize')}. The page-size parameter name may have "
+                      f"changed; this will take {total_pages} requests.")
 
         all_pages.append(data)
 
         with open("progress.txt", mode="w") as progress_file:
-            progress_file.write(f"Queried page {page_idx}..")
-
-        # Save each page so a failure doesn't mean starting over.
-        path = os.path.join(OUTPUT_DIR, f"response_data_{page_idx}.json")
-        with open(path, mode="w", encoding="utf-8") as f:
-            json.dump(data, f, indent=4)
-
-        # Stop if the server reports this was the last page.
-        total_pages = data.get("total")
-        if total_pages is not None and page_idx >= int(total_pages):
-            break
+            progress_file.write(f"Queried page {page_idx} of {total_pages}")
+        if page_idx % 25 == 0:
+            print(f"  page {page_idx} / {total_pages}")
 
         page_idx += 1
-        time.sleep(60 / random.randint(2, 6))
 
-    print(f"[DEBUG] Finished querying {page_idx} pages of UCOP data for year {year}")
+    print(f"Finished querying {len(all_pages)} pages for year {year}")
     return all_pages
 
 
-def parse_salary_data_to_csv(response_data_list, year: int) -> None:
-    column_names = [
-        "id", "year", "location", "first name", "last name", "title",
-        "gross pay", "regular pay", "overtime pay", "other pay",
-    ]
-
+def parse_salary_data_to_csv(pages: list, year: int) -> None:
     output_csv_filename = f"UCOP_Data_{year}.csv"
-    total_num_records = 0
+    total = 0
 
     with open(output_csv_filename, mode="w", encoding="utf-8", newline="") as csv_file:
-        csv_writer = csv.writer(csv_file, delimiter=",")
-        csv_writer.writerow(column_names)
+        writer = csv.writer(csv_file)
+        writer.writerow(COLUMN_NAMES)
 
-        for response_data in response_data_list:
-            for employee_record in response_data["rows"]:
-                employee_data = employee_record["cell"]
-                assert len(employee_data) == len(column_names), employee_data
-                csv_writer.writerow(employee_data)
-                total_num_records += 1
+        for page in pages:
+            for row in page["rows"]:
+                writer.writerow([row[field] for field in FIELDS])
+                total += 1
 
-    size = os.path.getsize(output_csv_filename)
-    print(f"[DEBUG] Wrote {total_num_records} records to '{output_csv_filename}', size={size} bytes")
+    expected = pages[0]["records"] if pages else 0
+    print(f"Wrote {total} records to '{output_csv_filename}' "
+          f"({os.path.getsize(output_csv_filename)} bytes)")
+    if total != expected:
+        print(f"WARNING: server reported {expected} records but only {total} were received.")
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-y", "--year", type=int, required=True,
                         help="The year you wish to download salary data for.")
+    parser.add_argument("-p", "--page-size", type=int, default=1000,
+                        help="Rows to request per page (default 1000). Use 20 if larger sizes are ignored.")
     args = parser.parse_args()
 
-    queried_salary_data = acquire_data(args.year)
-    parse_salary_data_to_csv(queried_salary_data, args.year)
+    pages = acquire_data(args.year, args.page_size)
+    parse_salary_data_to_csv(pages, args.year)
