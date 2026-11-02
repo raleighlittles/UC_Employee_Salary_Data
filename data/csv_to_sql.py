@@ -54,7 +54,7 @@ def create_database_from_csv(csv_dir_name: str):
             # but this causes issues in cases where an apostrophe appears in a person's last name, e.g. 'O'BRIEN'. To truly get around this we have to tell pandas to ignored escaped apostrophes
             try:
                 curr_csv = pandas.read_csv(filepath_or_buffer=os.path.join(
-                    csv_dir_name, csv_filename), sep=",", quotechar="'", escapechar="\\", names=CSV_COLUMNS)
+                    csv_dir_name, csv_filename), sep=",", quotechar="'", escapechar="\\", names=CSV_COLUMNS, header=0)
 
             except pandas.errors.ParserError as exc_1:
                 print(f"[ERROR] Couldn't parse CSV file: '{exc_1}'")
