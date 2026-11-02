@@ -71,7 +71,7 @@ def create_database_from_csv(csv_dir_name: str):
 
             print(
                 f"Loaded CSV file successfully! Found '{locale.format_string('%d', curr_csv.size, grouping=True)}' rows and '{len(curr_csv.columns)}' columns")
-            csv_rows_count += curr_csv.size
+            csv_rows_count += len(curr_csv)
 
             combined_dataframe = pandas.concat([combined_dataframe, curr_csv])
 
@@ -84,7 +84,7 @@ def create_database_from_csv(csv_dir_name: str):
     combined_dataframe.to_sql(
         name="salaries", con=db_engine, index=True, index_label="record_id")
 
-    if (csv_rows_count != combined_dataframe.size):
+    if (csv_rows_count != len(combined_dataframe)):
         print(
             f"[ERROR] The combined CSV file has '{locale.format_string('%d', combined_dataframe.size, grouping=True)}' rows, but the sum of all individual CSV files is '{locale.format_string('%d', csv_rows_count, grouping=True)}' rows. This may indicate a problem with the CSV parsing logic.")
         # Write the concatenated CSV to disk for debugging purposes
