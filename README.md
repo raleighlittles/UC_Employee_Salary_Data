@@ -2,7 +2,7 @@
 
 I scraped the [University of California's Employee Pay website](https://ucannualwage.ucop.edu/wage/) that provides details on every UC employee and their wages for a given year*.
 
-Data is available for the years **2010* through *2023*. I do a annual Github release that contains a SQL database that combines all salary data for known years, including that previous year, e.g. 2023's release contains 2010 - 2022 data.
+Data is available for the years **2010* through *2025*. I do a annual Github release that contains a SQL database that combines all salary data for known years, including that previous year, e.g. 202X's release contains 2010 - 202(X-1) data.
 
 # Scraper
 
